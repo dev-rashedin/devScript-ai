@@ -1,0 +1,1 @@
+console.log('hello from ai code analyzer server');
