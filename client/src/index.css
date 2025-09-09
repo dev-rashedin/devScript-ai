@@ -1,1 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @import 'tailwindcss';
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+
+@layer utilities {
+  .font-logo {
+    font-family: 'Raleway', sans-serif;
+  }
+
+  .flex-center {
+    @apply flex items-center justify-center
+  }
+  .flex-col-center {
+    @apply flex flex-col items-center justify-center
+  }
+}
