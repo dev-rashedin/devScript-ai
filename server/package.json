@@ -18,7 +18,8 @@
     "express-error-toolkit": "^1.2.0",
     "express-rate-limit": "^8.1.0",
     "helmet": "^8.1.0",
-    "http-status-toolkit": "^2.0.0"
+    "http-status-toolkit": "^2.0.0",
+    "openai": "^5.19.1"
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",
