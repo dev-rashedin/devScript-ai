@@ -1,11 +1,13 @@
-import 'dotenv/config';
+import dotenv from 'dotenv';
+dotenv.config();
 import express, { Request, Response } from 'express';
 import cors from 'cors';
 import { notFoundHandler, globalErrorHandler, asyncHandler, BadRequestError, NotFoundError } from 'express-error-toolkit';
 import { StatusCodes } from 'http-status-toolkit';
 import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
-import OpenAI from 'openai';
+import codeRouter from './routes/code-analyze.route';
+
 
 const app = express();
 
@@ -32,55 +34,10 @@ app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true }));
 
 
-const API_KEY = process.env.OPENAI_API_KEY;
+// routes
+app.use(codeRouter)
 
 
-const client = new OpenAI({
-  baseURL: 'https://api.studio.nebius.com/v1/',
-  apiKey: API_KEY,
-});
-
-
-app.post(
-  '/api/explain-code',
-  asyncHandler( async (req: Request, res: Response) => {
-
-    const { code, language } = req.body;
-    
-    if(!code || !language) {
-      throw new BadRequestError('Please provide code and language');
-    }
-
-
-
-    const response = await client.chat.completions.create({
-      model: 'openai/gpt-oss-120b',
-      "messages" :  [
-     {
-       role: 'user',
-       content: `Please explain this ${
-         language || ''
-       } code in simple terms:\n\n\`\`\`${language || ''}\n${code}\n\`\`\``,
-     },
-   ],
-      temperature: 0.3,
-      max_tokens: 800,
-    });
-
-    const explanation = response?.choices[0]?.message?.content;
-
-    if(!explanation) {
-      throw new NotFoundError('No explanation found');
-    }
-
-    res.status(StatusCodes.OK).json({
-      explanation,
-      language: language || "unknown",
-    })
-
-      
-  })
-);
 
 
 // home route
