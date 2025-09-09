@@ -5,8 +5,35 @@
   body {
     font-family: 'Inter', sans-serif;
   }
-}
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-['Oswald'];
+  }
+
+  a {
+    @apply text-blue-600 hover:text-blue-800;
+  }
+
+  code {
+    @apply font-mono bg-gray-100 p-1 rounded;
+  }
+
+  .dark body {
+    @apply bg-gray-900 text-gray-100;
+  }
+  .dark a {
+    @apply text-blue-400;
+  }
+
+  .dark code {
+    @apply bg-gray-800 text-gray-200;
+  }
+}
 
 @layer utilities {
   .font-logo {
@@ -14,9 +41,22 @@
   }
 
   .flex-center {
-    @apply flex items-center justify-center
+    @apply flex items-center justify-center;
   }
   .flex-col-center {
-    @apply flex flex-col items-center justify-center
+    @apply flex flex-col items-center justify-center;
+  }
+
+  .bg-primary {
+    background-color: #4f46e5;
+  } /* Indigo 600 */
+  .text-primary {
+    color: #4f46e5;
+  }
+  .bg-accent {
+    background-color: #10b981;
+  } /* Emerald 500 */
+  .text-accent {
+    color: #10b981;
   }
 }
