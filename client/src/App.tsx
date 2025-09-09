@@ -1,7 +1,10 @@
+import CodeEntry from "./component/CodeEntry"
 
 const App = () => {
   return (
-    <div className="min-h-screen flex justify-center items-center ">App</div>
+    <main>
+      <CodeEntry/>
+   </main>
   )
 }
 export default App

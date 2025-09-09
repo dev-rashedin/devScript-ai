@@ -1,8 +1,11 @@
+import Header from "./ui/header"
 
 
 const CodeEntry = () => {
   return (
-    <div>CodeEntry</div>
+    <div>
+      <Header/>
+    </div>
   )
 }
 export default CodeEntry
