@@ -1,24 +1,21 @@
 // ThemeProvider.tsx
 import {
   useState,
-  type ReactNode,
   useEffect,
 } from 'react';
 import { ThemeContext } from '../utils/ThemeContext';
 
 
 
-interface ThemeProviderProps {
-  children: ReactNode;
-}
+
 
 export const ThemeProvider = ({ children }: ThemeProviderProps) => {
   const [dark, setDark] = useState(false);
-  const [primaryColor, setPrimaryColor] = useState('#4f46e5'); // Indigo 600
-  const [headingFont, setHeadingFont] = useState("'Oswald', sans-serif");
-  const [bodyFont, setBodyFont] = useState("'PT Serif', serif");
+  // const [primaryColor, setPrimaryColor] = useState('#4f46e5'); // Indigo 600
+  // const [headingFont, setHeadingFont] = useState("'Oswald', sans-serif");
+  // const [bodyFont, setBodyFont] = useState("'PT Serif', serif");
 
-  // Apply dark mode class to html/body
+
   useEffect(() => {
     if (dark) {
       document.documentElement.classList.add('dark');
@@ -27,12 +24,12 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
     }
   }, [dark]);
 
-  // Apply CSS variables for dynamic theme
-  useEffect(() => {
-    document.documentElement.style.setProperty('--primary-color', primaryColor);
-    document.documentElement.style.setProperty('--heading-font', headingFont);
-    document.documentElement.style.setProperty('--body-font', bodyFont);
-  }, [primaryColor, headingFont, bodyFont]);
+
+  // useEffect(() => {
+  //   document.documentElement.style.setProperty('--primary-color', primaryColor);
+  //   document.documentElement.style.setProperty('--heading-font', headingFont);
+  //   document.documentElement.style.setProperty('--body-font', bodyFont);
+  // }, [primaryColor, headingFont, bodyFont]);
 
   const toggleDark = () => setDark((prev) => !prev);
 
@@ -41,12 +38,12 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
       value={{
         dark,
         toggleDark,
-        primaryColor,
-        setPrimaryColor,
-        headingFont,
-        setHeadingFont,
-        bodyFont,
-        setBodyFont,
+        // primaryColor,
+        // setPrimaryColor,
+        // headingFont,
+        // setHeadingFont,
+        // bodyFont,
+        // setBodyFont,
       }}
     >
       {children}

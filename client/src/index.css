@@ -43,8 +43,15 @@
   .flex-center {
     @apply flex items-center justify-center;
   }
+  .flex-between {
+    @apply flex items-center justify-between;
+  }
   .flex-col-center {
     @apply flex flex-col items-center justify-center;
+  }
+
+  .boundary {
+   @apply container mx-auto px-2 md:px-4 lg:px-8 xl:px-12
   }
 
   .bg-primary {
@@ -58,5 +65,17 @@
   } /* Emerald 500 */
   .text-accent {
     color: #10b981;
+  }
+
+  .border-primary {
+    border-color: hsl(276, 89%, 59%);
+  }
+
+  .bg-navbar {
+    background-color: hsl(280, 13%, 91%); /* Indigo 600 */
+  }
+
+  .dark .bg-navbar {
+    background-color: hsl(246, 100%, 4%); /* Indigo 600 */
   }
 }
