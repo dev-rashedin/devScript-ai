@@ -7,7 +7,7 @@ const Navbar = () => {
   const { dark, toggleDark } = useTheme();
 
   return (
-    <main className='bg-navbar h-20 flex items-center sticky top-0'>
+    <main className='bg-navbar h-20 flex items-center sticky top-0 shadow'>
       <nav className='flex-between boundary'>
         <Link
           to='/'

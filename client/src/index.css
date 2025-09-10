@@ -4,34 +4,38 @@
 @layer base {
   body {
     font-family: 'Inter', sans-serif;
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 0%);
+
+    a {
+      @apply text-blue-600 hover:text-blue-800;
+    }
+
+    code {
+      @apply font-mono bg-gray-100 p-1 rounded;
+    }
+
+     .bg-navbar {
+    background-color: hsl(300, 9%, 98%); /* Indigo 600 */
+  }
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply font-['Oswald'];
-  }
+  .dark {
+    body {
+      background-color: hsl(0, 0%, 12%);
+      color: hsl(0, 0%, 100%);
+    }
+    code {
+      @apply bg-gray-800 text-gray-200;
+    }
 
-  a {
-    @apply text-blue-600 hover:text-blue-800;
-  }
+    a {
+      @apply text-blue-400;
+    }
 
-  code {
-    @apply font-mono bg-gray-100 p-1 rounded;
+    .bg-navbar {
+    background-color: hsl(0, 0%, 7%); /* Indigo 600 */
   }
-
-  .dark body {
-    @apply bg-gray-900 text-gray-100;
-  }
-  .dark a {
-    @apply text-blue-400;
-  }
-
-  .dark code {
-    @apply bg-gray-800 text-gray-200;
   }
 }
 
@@ -51,31 +55,23 @@
   }
 
   .boundary {
-   @apply container mx-auto px-2 md:px-4 lg:px-8 xl:px-12
+    @apply container mx-auto px-2 md:px-4 lg:px-8 xl:px-12;
   }
 
   .bg-primary {
     background-color: #4f46e5;
-  } /* Indigo 600 */
+  }
   .text-primary {
     color: #4f46e5;
   }
   .bg-accent {
     background-color: #10b981;
-  } /* Emerald 500 */
+  }
   .text-accent {
     color: #10b981;
   }
 
   .border-primary {
     border-color: hsl(276, 89%, 59%);
-  }
-
-  .bg-navbar {
-    background-color: hsl(280, 13%, 91%); /* Indigo 600 */
-  }
-
-  .dark .bg-navbar {
-    background-color: hsl(246, 100%, 4%); /* Indigo 600 */
   }
 }
