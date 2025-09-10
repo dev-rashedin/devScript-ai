@@ -7,14 +7,14 @@ const Navbar = () => {
   const { dark, toggleDark } = useTheme();
 
   return (
-    <main className='bg-navbar h-20 flex items-center sticky top-0'>
+    <main className='bg-navbar h-20 flex items-center sticky top-0 shadow'>
       <nav className='flex-between boundary'>
         <Link
           to='/'
-          className='flex gap-2 items-center cursor-pointer font-logo'
+          className='flex gap-2 items-center cursor-pointer font-logo text-primary'
         >
           <img src='/logo.png' alt='logo' className='w-12 h-12' />
-          <h1 className='text-2xl font-bold'>AI Analyzer</h1>
+          <h1 className='text-2xl font-bold mt-1'>AI Analyzer</h1>
         </Link>
 
         <button
