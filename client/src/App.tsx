@@ -6,7 +6,7 @@ const App = () => {
   return (
     <main>
       <Navbar />
-      <section className='boundary min-h-[80vh] flex-center'>
+      <section className='boundary min-h-[80vh]'>
         <CodeEntry />
 
         

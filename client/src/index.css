@@ -12,11 +12,16 @@
     }
 
     code {
-      @apply font-mono bg-gray-100 p-1 rounded;
+      @apply bg-gray-100 p-1 rounded;
     }
 
     .bg-navbar {
       background-color: hsl(300, 9%, 98%); /* Indigo 600 */
+    }
+
+    .form-ui {
+      background-color: hsl(0, 70%, 99%);
+      @apply w-full max-w-4xl mx-auto p-6 rounded-2xl shadow-lg my-8;
     }
   }
 
@@ -34,7 +39,11 @@
     }
 
     .bg-navbar {
-      background-color: hsl(0, 0%, 7%);
+      background-color: hsl(0, 0%, 9%);
+    }
+
+    .form-ui {
+      background-color: hsl(0, 0%, 9%); /* Indigo 600 */
     }
   }
 }
@@ -59,10 +68,12 @@
   }
 
   .bg-primary {
-    background-color: #4f46e5;
+    background-color: hsl(261, 85%, 62%);
+    color: hsl(0, 0%, 0%);
   }
+
   .text-primary {
-    color: hsl(261, 85%, 62%);
+    color: hsl(276, 100%, 43%);
   }
   .bg-accent {
     background-color: #10b981;
@@ -73,5 +84,10 @@
 
   .border-primary {
     border-color: hsl(276, 89%, 59%);
+  }
+
+  .btn-primary {
+    background-color: hsl(276, 100%, 43%);
+    @apply px-6 py-2 rounded-lg cursor-pointer font-semibold hover:bg-purple-800 text-white transition disabled:opacity-50;
   }
 }
