@@ -15,9 +15,9 @@
       @apply font-mono bg-gray-100 p-1 rounded;
     }
 
-     .bg-navbar {
-    background-color: hsl(300, 9%, 98%); /* Indigo 600 */
-  }
+    .bg-navbar {
+      background-color: hsl(300, 9%, 98%); /* Indigo 600 */
+    }
   }
 
   .dark {
@@ -34,8 +34,8 @@
     }
 
     .bg-navbar {
-    background-color: hsl(0, 0%, 7%); /* Indigo 600 */
-  }
+      background-color: hsl(0, 0%, 7%);
+    }
   }
 }
 
@@ -62,7 +62,7 @@
     background-color: #4f46e5;
   }
   .text-primary {
-    color: #4f46e5;
+    color: hsl(261, 85%, 62%);
   }
   .bg-accent {
     background-color: #10b981;
