@@ -1,23 +1,24 @@
-import { useActionState } from 'react';
-import { explain } from '../../actions';
-import CodeExplanation from '../ui/code-explanation';
-import Error from '../Error';
 
-const CodeExplainForm = () => {
-  const [formState, formAction, isPending] = useActionState(explain, null);
+
+const codeExplainForm = () => {
   return (
     <div className='w-full max-w-4xl bg-white p-6 rounded-2xl shadow-lg'>
-      <form action={formAction}>
+      <form>
+        {/* select box */}
         <label className='block mb-2 font-semibold'>Language:</label>
         <select
           name='language'
           className='border rounded-lg p-2 w-full mb-4 bg-transparent'
         >
           <option value='javascript'>JavaScript</option>
+          <option value='typescript'>TypeScript</option>
           <option value='python'>Python</option>
           <option value='java'>Java</option>
+          <option value='golang'>Golang</option>
+          <option value='rust'>Rust</option>
         </select>
 
+        {/* text area */}
         <label className='block mb-2 font-semibold'>Your Code:</label>
         <textarea
           name='code'
@@ -26,6 +27,7 @@ const CodeExplainForm = () => {
           className='border rounded-lg w-full p-3 font-mono text-sm bg-transparent min-h-[150px]'
         />
 
+        {/* submit button */}
         <button
           type='submit'
           disabled={isPending}
@@ -34,15 +36,7 @@ const CodeExplainForm = () => {
           {isPending ? 'Explaining...' : 'Explain Code'}
         </button>
       </form>
-      {isPending ? (
-        <p className='bg-gray-300 my-3 w-64 p-2 rounded-sm'>Thinking...</p>
-      ) : formState?.success ? (
-        <CodeExplanation explanation={formState?.data.explanation} />
-      ) : (
-        formState?.success === false && <Error error={formState?.error} />
-      )}
     </div>
   );
-};
-
-export default CodeExplainForm;
+}
+export default codeExplainForm

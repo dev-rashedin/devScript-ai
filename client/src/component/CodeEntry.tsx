@@ -1,7 +1,9 @@
+import CodeExplainForm from './forms/CodeExplainForm';
+
 const CodeEntry = () => {
   return (
     <div>
-    CodeEntry
+      <CodeExplainForm />
     </div>
   );
 };

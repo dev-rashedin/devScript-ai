@@ -1,15 +1,16 @@
-// import CodeEntry from './component/CodeEntry';
-import Home from './component/Home';
+import CodeEntry from './component/CodeEntry';
+// import Home from './component/Home';
 import Navbar from './component/Navbar';
 
 const App = () => {
   return (
     <main>
       <Navbar />
-      <section className='boundary min-h-[calc(100vh-2000px)]'>
-        {/* <CodeEntry /> */}
+      <section className='boundary min-h-[80vh] flex-center'>
+        <CodeEntry />
 
-        <Home />
+        
+        {/* <Home /> */}
       </section>
     </main>
   );
