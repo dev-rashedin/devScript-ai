@@ -19,4 +19,22 @@ export const services = [
     icon: FiPenTool,
     path: '/writer',
   },
+  {
+    title: 'Article Writer',
+    desc: 'Generate professional articles, blogs, or notes effortlessly.',
+    icon: FiPenTool,
+    path: '/writer',
+  },
+  {
+    title: 'Article Writer',
+    desc: 'Generate professional articles, blogs, or notes effortlessly.',
+    icon: FiPenTool,
+    path: '/writer',
+  },
+  {
+    title: 'Article Writer',
+    desc: 'Generate professional articles, blogs, or notes effortlessly.',
+    icon: FiPenTool,
+    path: '/writer',
+  },
 ];

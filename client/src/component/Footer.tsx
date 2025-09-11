@@ -13,7 +13,7 @@ const Footer = () => {
         {/* Right: social / links */}
         <div className='flex gap-4'>
           <a
-            href='https://github.com/yourusername'
+            href='https://github.com/dev-rashedin'
             target='_blank'
             rel='noopener noreferrer'
             className='hover:text-primary transition'
@@ -21,7 +21,7 @@ const Footer = () => {
             <FaGithub className='w-5 h-5' />
           </a>
           <a
-            href='https://www.linkedin.com/in/yourprofile'
+            href='https://www.linkedin.com/in/dev-rashedin'
             target='_blank'
             rel='noopener noreferrer'
             className='hover:text-primary transition'
