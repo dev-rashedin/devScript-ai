@@ -1,14 +1,19 @@
 declare interface ThemeContextType {
   dark: boolean;
   toggleDark: () => void;
-  // primaryColor: string;
-  // setPrimaryColor: (color: string) => void;
-  // headingFont: string;
-  // setHeadingFont: (font: string) => void;
-  // bodyFont: string;
-  // setBodyFont: (font: string) => void;
 }
 
 declare interface ThemeProviderProps {
   children: ReactNode;
+}
+
+declare interface ExplanationData {
+  explanation: string;
+  language: string;
+}
+
+declare interface ExplainResult {
+  success: boolean;
+  data?: unknown;
+  error?: string;
 }

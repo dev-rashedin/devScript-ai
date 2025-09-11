@@ -1,15 +1,16 @@
+import { useActionState } from 'react';
+import { explain } from '../../actions';
+import Error from '../Error';
 
+const CodeExplainForm = () => {
+  const [formState, formAction, isPending] = useActionState(explain, null);
 
-const codeExplainForm = () => {
   return (
     <div className='form-ui'>
-      <form>
+      <form action={formAction}>
         {/* select box */}
         <label className='block mb-2 font-semibold'>Language:</label>
-        <select
-          name='language'
-          className='border rounded-lg p-2 w-full mb-4'
-        >
+        <select name='language' className='border rounded-lg p-2 w-full mb-4'>
           <option value='javascript'>JavaScript</option>
           <option value='typescript'>TypeScript</option>
           <option value='python'>Python</option>
@@ -33,11 +34,20 @@ const codeExplainForm = () => {
           // disabled={isPending}
           className='mt-4 btn-primary'
         >
-          Explain Code
-          {/* {isPending ? 'Explaining...' : 'Explain Code'} */}
+          {isPending ? 'Explaining...' : 'Explain Code'}
         </button>
       </form>
+
+      {isPending ? (
+        <p className='bg-gray-300 my-3 w-64 p-2 rounded-sm'>Thinking...</p>
+      ) : formState?.success ? (
+        <CodeExplanation explanation={formState.data} />
+      ) : (
+            formState?.success === false && (
+              <Error error={formState.error} />
+        )
+      )}
     </div>
   );
-}
-export default codeExplainForm
+};
+export default CodeExplainForm;

@@ -1,36 +1,16 @@
 'use server';
 
-
-interface ExplanationData {
-  explanation: string;
-  language: string;
-}
-
-interface ExplainResult {
-  success: boolean;
-  data?: unknown;
-  error?: string;
-}
-
-export async function explain(
-  _prevState: unknown,
-  formData: FormData
-): Promise<ExplainResult> {
-  const code = formData.get('code') as string | null;
-  const language = formData.get('language') as string | null;
-
-  console.log(`Generating explanation for ${language ?? 'unknown'}`);
+export async function explain(_prevState: unknown, formData : FormData) {
+  const code = formData.get('code');
+  const language = formData.get('language');
 
   try {
-    const res = await fetch(
-      `${import.meta.env.VITE_API_BASE_URL}/explain-code`,
-      {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ code, language }),
-      }
-    );
-
+   const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/explain-code`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ code, language }),
+   })
+    
     if (!res.ok) {
       return {
         success: false,
@@ -38,21 +18,20 @@ export async function explain(
       };
     }
 
-    const data = (await res.json()) as ExplanationData;
-
+    const data = await res.json();
+    
     return {
       success: true,
       data,
-    };
-  } catch (err) {
+    }
+    
+  } catch (error : unknown) {
     const errorMessage =
-      err instanceof Error ? err.message : 'Unknown error occurred';
-
+      error instanceof Error ? error.message : 'Unknown error occurred';
     return {
       success: false,
-      error: `An Error Occurred: ${errorMessage}`,
+      error: `An error occurred: ${errorMessage}`,
     };
   }
 }
 
-export default explain;
