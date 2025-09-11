@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "highlight.js": "^11.11.1",
+    "lottie-react": "^2.4.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-error-boundary": "^6.0.0",
