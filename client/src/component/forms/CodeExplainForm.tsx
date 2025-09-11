@@ -10,8 +10,8 @@ const CodeExplainForm = () => {
   const [code, setCode] = useState(''); // local state
 
   return (
-    <div className='form-ui'>
-      <form action={formAction}>
+    <div className='pt-20'>
+      <form action={formAction} className='form-ui '>
         {/* select box */}
         <label className='block mb-2 font-semibold'>Language:</label>
         <select name='language' className='border rounded-lg p-2 w-full mb-4 '>

@@ -6,9 +6,6 @@ import CopyButton from "./ui/copy-button";
 
 
 const CodeExplanation = ({ explanation }: TExplanation) => {
-
- 
-
   return (
     <div className='w-full max-w-4xl mt-6  p-6 rounded-2xl  prose prose-lg dark:prose-invert leading-loose tracking-wide relative'>
      <CopyButton explanation={explanation}/>
