@@ -1,6 +1,6 @@
 const Button = ({ label, type, onClick }: ButtonProps) => {
   let buttonClass =
-    'px-4 py-2 rounded-lg text-white text-sm lg:text-base ';
+    'px-4 py-2 rounded-lg text-white text-sm lg:text-base cursor-pointer ';
   if (type === 'primary') {
     buttonClass += ' bg-primary hover:bg-purple-500';
   }
