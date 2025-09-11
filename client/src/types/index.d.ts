@@ -17,3 +17,5 @@ declare interface ExplainResult {
   data?: unknown;
   error?: string;
 }
+
+declare type TExplanation = { explanation: string };

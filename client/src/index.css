@@ -46,6 +46,23 @@
       background-color: hsl(0, 0%, 19%); /* Indigo 600 */
     }
   }
+
+  .prose p {
+  margin-bottom: 1.05em; 
+}
+
+.prose h2, .prose h3 {
+  margin-top: 1.25em; 
+  margin-bottom: 0.75em;
+}
+
+.prose ul, .prose ol {
+  margin-bottom: 1.25em;
+}
+
+.prose code {
+  margin-bottom: 1.15rem;
+}
 }
 
 @layer utilities {

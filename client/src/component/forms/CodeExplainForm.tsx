@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { explain } from '../../actions';
 import Error from '../Error';
 import CodeExplanation from '../CodeExplanation';
-import LoadingDots from '../LoadingDots';
+import LoadingDots from '../ui/loading-dots';
 
 const CodeExplainForm = () => {
   const [formState, formAction, isPending] = useActionState(explain, null);
@@ -31,7 +31,7 @@ const CodeExplainForm = () => {
           placeholder='Paste your code here...'
           value={code}
           onChange={(e) => setCode(e.target.value)}
-          className='border rounded-lg w-full p-3 font-mono text-sm bg-transparent min-h-[150px]'
+          className='border rounded-lg w-full p-3 font-mono text-sm bg-transparent min-h-[250px] placeholder:text-gray-400 placeholder:text-base'
         />
 
         {/* submit button */}
