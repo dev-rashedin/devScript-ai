@@ -1,4 +1,4 @@
-import CodeExplainForm from './component/forms/CodeExplainForm';
+import { Outlet } from 'react-router';
 import Navbar from './component/Navbar';
 
 const App = () => {
@@ -6,7 +6,7 @@ const App = () => {
     <main>
       <Navbar />
       <section className='boundary min-h-[80vh]'>
-        <CodeExplainForm />
+     <Outlet/>
       </section>
     </main>
   );
