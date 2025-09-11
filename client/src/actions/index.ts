@@ -4,12 +4,18 @@ export async function explain(_prevState: unknown, formData : FormData) {
   const code = formData.get('code');
   const language = formData.get('language');
 
+  console.log('base url', import.meta.env.VITE_API_BASE_URL);
+  
+
   try {
-   const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/explain-code`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ code, language }),
-   })
+   const res = await fetch(
+     `${import.meta.env.VITE_API_BASE_URL}/explain-code`,
+     {
+       method: 'POST',
+       headers: { 'Content-Type': 'application/json' },
+       body: JSON.stringify({ code, language }),
+     }
+   );
     
     if (!res.ok) {
       return {

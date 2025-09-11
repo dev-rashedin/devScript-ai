@@ -1,10 +1,12 @@
 import { useActionState } from 'react';
+import { useState } from 'react';
 import { explain } from '../../actions';
 import Error from '../Error';
 import CodeExplanation from '../CodeExplanation';
 
 const CodeExplainForm = () => {
   const [formState, formAction, isPending] = useActionState(explain, null);
+  const [code, setCode] = useState(''); // local state
 
   return (
     <div className='form-ui'>
@@ -26,15 +28,13 @@ const CodeExplainForm = () => {
           name='code'
           required
           placeholder='Paste your code here...'
+          value={code}
+          onChange={(e) => setCode(e.target.value)}
           className='border rounded-lg w-full p-3 font-mono text-sm bg-transparent min-h-[150px]'
         />
 
         {/* submit button */}
-        <button
-          type='submit'
-          // disabled={isPending}
-          className='mt-4 btn-primary'
-        >
+        <button type='submit' className='mt-4 btn-primary'>
           {isPending ? 'Explaining...' : 'Explain Code'}
         </button>
       </form>
@@ -42,11 +42,9 @@ const CodeExplainForm = () => {
       {isPending ? (
         <p className='bg-gray-300 my-3 w-64 p-2 rounded-sm'>Thinking...</p>
       ) : formState?.success ? (
-        <CodeExplanation explanation={formState.data} />
+        <CodeExplanation explanation={formState.data.explanation} />
       ) : (
-            formState?.success === false && (
-              <Error error={formState.error} />
-        )
+        formState?.success === false && <Error error={formState.error} />
       )}
     </div>
   );

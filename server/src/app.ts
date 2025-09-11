@@ -1,21 +1,22 @@
-import dotenv from 'dotenv';
-dotenv.config();
+import 'dotenv/config';
 import express, { Request, Response } from 'express';
 import cors from 'cors';
-import { notFoundHandler, globalErrorHandler, asyncHandler, BadRequestError, NotFoundError } from 'express-error-toolkit';
+import { notFoundHandler, globalErrorHandler } from 'express-error-toolkit';
 import { StatusCodes } from 'http-status-toolkit';
 import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
 import codeRouter from './routes/code-analyze.route';
 
-
 const app = express();
 
 // security middleware
 const corsOption = {
-  origin: process.env.CLIENT_URL || 'http://localhost:3000',
-  credentials: true
-}
+  origin: process.env.CLIENT_URL || 'http://localhost:5173',
+  credentials: true,
+};
+
+console.log('origin is', corsOption.origin);
+
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
   max: 100, // limit each IP to 100 requests per windowMs
@@ -26,19 +27,14 @@ const limiter = rateLimit({
 
 app.use(helmet());
 app.use(cors(corsOption));
-app.use(limiter)
-
+app.use(limiter);
 
 // body parser
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true }));
 
-
 // routes
-app.use(codeRouter)
-
-
-
+app.use('/api', codeRouter);
 
 // home route
 app.get('/', (_req: Request, res: Response) => {

@@ -20,7 +20,7 @@ const client = new OpenAI({
 });
 
 codeRouter.post(
-  '/api/explain-code',
+  '/explain-code',
   asyncHandler(async (req: Request, res: Response) => {
     const { code, language } = req.body;
 
