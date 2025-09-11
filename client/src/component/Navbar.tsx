@@ -11,10 +11,10 @@ const Navbar = () => {
       <nav className='flex-between boundary'>
         <Link
           to='/'
-          className='flex gap-2 items-center cursor-pointer font-logo text-primary'
+          className='flex items-center cursor-pointer font-logo text-primary'
         >
-          <img src='/logo.png' alt='logo' className='w-12 h-12' />
-          <h1 className='text-2xl font-bold mt-1'>AI Analyzer</h1>
+          <img src='/logo.png' alt='logo' className='w-20 h-20' />
+          <h1 className='text-2xl font-bold -ml-2'>AI Analyzer</h1>
         </Link>
 
         <button

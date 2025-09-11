@@ -1,5 +1,4 @@
-import CodeEntry from './component/CodeEntry';
-// import Home from './component/Home';
+import CodeExplainForm from './component/forms/CodeExplainForm';
 import Navbar from './component/Navbar';
 
 const App = () => {
@@ -7,10 +6,7 @@ const App = () => {
     <main>
       <Navbar />
       <section className='boundary min-h-[80vh]'>
-        <CodeEntry />
-
-        
-        {/* <Home /> */}
+        <CodeExplainForm />
       </section>
     </main>
   );
