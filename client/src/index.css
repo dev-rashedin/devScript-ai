@@ -27,7 +27,7 @@
 
   .dark {
     body {
-      background-color: hsl(0, 0%, 12%);
+      background-color: hsl(0, 0%, 25%);
       color: hsl(0, 0%, 100%);
     }
     code {
@@ -39,11 +39,11 @@
     }
 
     .bg-navbar {
-      background-color: hsl(0, 0%, 9%);
+      background-color: hsl(0, 0%, 5%);
     }
 
     .form-ui {
-      background-color: hsl(0, 0%, 9%); /* Indigo 600 */
+      background-color: hsl(0, 0%, 19%); /* Indigo 600 */
     }
   }
 }

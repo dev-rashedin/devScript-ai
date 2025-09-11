@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { explain } from '../../actions';
 import Error from '../Error';
 import CodeExplanation from '../CodeExplanation';
+import LoadingDots from '../LoadingDots';
 
 const CodeExplainForm = () => {
   const [formState, formAction, isPending] = useActionState(explain, null);
@@ -40,7 +41,7 @@ const CodeExplainForm = () => {
       </form>
 
       {isPending ? (
-        <p className='bg-gray-300 my-3 w-64 p-2 rounded-sm'>Thinking...</p>
+        <LoadingDots />
       ) : formState?.success ? (
         <CodeExplanation explanation={formState.data.explanation} />
       ) : (
