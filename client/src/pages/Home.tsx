@@ -23,7 +23,7 @@ const Home = () => {
           <Link
             key={s.path}
             to={s.path}
-            className='p-6 rounded-2xl shadow flex border   border-primary group relative text-primary hover:text-white '
+            className='p-6 rounded-2xl shadow flex border   border-primary group relative text-primary hover:text-white bg-card'
           >
             <span className='absolute rounded-2xl left-0 top-0 h-full w-0 bg-primary transition-all duration-500 ease-in-out group-hover:w-full'></span>
             <div className='z-20 flex flex-col space-y-2'>

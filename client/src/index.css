@@ -19,6 +19,10 @@
       background-color: hsl(0, 0%, 98%)
     }
 
+    .bg-card {
+      background-color: hsl(0, 0%, 98%);
+    }
+
     .form-ui {
       background-color: hsl(0, 0%, 98%);
       @apply w-full max-w-4xl mx-auto p-6 rounded-2xl shadow-lg my-8;
@@ -27,7 +31,7 @@
 
   .dark {
     body {
-      background-color: hsl(0, 0%, 25%);
+      background-color: hsl(0, 0%, 0%);
       color: hsl(0, 0%, 100%);
     }
     code {
@@ -40,6 +44,10 @@
 
     .bg-navbar {
       background-color: hsl(0, 0%, 5%);
+    }
+
+    .bg-card {
+      background-color: hsl(0 0% 10%);
     }
 
     .form-ui {
@@ -88,14 +96,14 @@
   }
 
   .bg-primary {
-    background-color: hsl(276, 100%, 43%);
+    background-color: hsl(216, 100%, 40%);
   }
 
   .text-primary {
-    color: hsl(276, 100%, 43%);
+    color: hsl(216, 100%, 60%);
   }
   .primary-outline {
-    border-color: hsl(276, 100%, 43%);
+    border-color: hsl(216, 100%, 60%);
   }
   .bg-accent {
     background-color: #10b981;
@@ -105,7 +113,7 @@
   }
 
   .border-primary {
-    border-color: hsl(276, 89%, 59%);
+    border-color: hsl(216, 100%, 60%);
   }
 
   .btn-primary {
