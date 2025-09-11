@@ -4,12 +4,14 @@ import Footer from './component/Footer';
 
 const App = () => {
   return (
-    <main>
+    <main className=' flex flex-col relative'>
       <Navbar />
-      <section className='boundary min-h-[80vh]'>
-     <Outlet/>
+      <section className='boundary flex-1'>
+        <Outlet />
       </section>
-      <Footer/>
+    
+        <Footer />
+  
     </main>
   );
 };

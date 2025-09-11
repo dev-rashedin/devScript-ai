@@ -16,22 +16,22 @@
     }
 
     .bg-navbar {
-      background-color: hsl(0, 0%, 98%)
+      background-color: hsl(0, 0%, 95%);
     }
 
     .bg-card {
-      background-color: hsl(0, 0%, 98%);
+      background-color: hsl(0, 0%, 95%);
     }
 
     .form-ui {
       background-color: hsl(0, 0%, 98%);
-      @apply w-full max-w-4xl mx-auto p-6 rounded-2xl shadow-lg my-8;
+      @apply w-full mx-auto p-6 rounded-2xl shadow-lg my-8;
     }
   }
 
   .dark {
     body {
-      background-color: hsl(0, 0%, 0%);
+      background-color: hsl(0, 0%, 15%);
       color: hsl(0, 0%, 100%);
     }
     code {
@@ -43,7 +43,7 @@
     }
 
     .bg-navbar {
-      background-color: hsl(0, 0%, 5%);
+      background-color: hsl(0, 0%, 10%);
     }
 
     .bg-card {
@@ -59,28 +59,26 @@
   }
 
   .prose p {
-  margin-bottom: 1.05em; 
-}
+    margin-bottom: 1.05em;
+  }
 
-.prose h2, .prose h3 {
-  margin-top: 1.25em; 
-  margin-bottom: 0.75em;
-}
+  .prose h2,
+  .prose h3 {
+    margin-top: 1.25em;
+    margin-bottom: 0.75em;
+  }
 
-.prose ul, .prose ol {
-  margin-bottom: 1.25em;
-}
+  .prose ul,
+  .prose ol {
+    margin-bottom: 1.25em;
+  }
 
-.prose code {
-  margin-bottom: 1.15rem;
-}
+  .prose code {
+    margin-bottom: 1.15rem;
+  }
 }
 
 @layer utilities {
-  .font-logo {
-    font-family: 'Raleway', sans-serif;
-  }
-
   .flex-center {
     @apply flex items-center justify-center;
   }

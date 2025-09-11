@@ -19,7 +19,7 @@ const Navbar = () => {
 
         <button
           onClick={toggleDark}
-          className=' p-1 rounded-full cursor-pointer'
+          className='cursor-pointer'
         >
           {dark ? (
             <FiMoon className='text-xl' />

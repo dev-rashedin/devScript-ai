@@ -7,7 +7,8 @@ import { RouterProvider } from 'react-router/dom';
 import { ThemeProvider } from './providers/ThemeProvider.tsx';
 import Home from './pages/Home.tsx';
 import CodeExplainForm from './component/forms/CodeExplainForm.tsx';
-import ErrorPage from './component/Error.tsx';
+import Summarizer from './pages/Summarizer.tsx';
+import ErrorPage from './pages/ErrorPage.tsx';
 
 const router = createBrowserRouter([
   {
@@ -17,7 +18,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: 'code-explainer', element: <CodeExplainForm/> },
-      // { path: 'summarizer', element: <SummarizerForm /> },
+      { path: 'summarizer', element: <Summarizer /> },
       // { path: 'writer', element: <WriterForm /> },
     ],
   },
@@ -27,8 +28,7 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ThemeProvider>
-
-    <RouterProvider router={router} />,
+    <RouterProvider router={router} />
     </ThemeProvider>
   </StrictMode>
 );
