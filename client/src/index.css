@@ -16,11 +16,11 @@
     }
 
     .bg-navbar {
-      background-color: hsl(300, 9%, 98%); /* Indigo 600 */
+      background-color: hsl(0, 0%, 98%)
     }
 
     .form-ui {
-      background-color: hsl(0, 70%, 99%);
+      background-color: hsl(0, 0%, 98%);
       @apply w-full max-w-4xl mx-auto p-6 rounded-2xl shadow-lg my-8;
     }
   }
@@ -43,7 +43,10 @@
     }
 
     .form-ui {
-      background-color: hsl(0, 0%, 19%); /* Indigo 600 */
+      background-color: hsl(0, 0%, 19%);
+      select option {
+        background-color: hsl(0, 0%, 19%);
+      }
     }
   }
 
@@ -91,6 +94,9 @@
 
   .text-primary {
     color: hsl(276, 100%, 43%);
+  }
+  .primary-outline {
+    border-color: hsl(276, 100%, 43%);
   }
   .bg-accent {
     background-color: #10b981;
