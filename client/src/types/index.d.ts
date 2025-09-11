@@ -19,3 +19,9 @@ declare interface ExplainResult {
 }
 
 declare type TExplanation = { explanation: string };
+
+declare interface ButtonProps {
+  label: string;
+  type: string;
+  onClick?: () => void;
+}

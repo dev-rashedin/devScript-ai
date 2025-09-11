@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import Button from '../components/Button';
+import Button from '../component/ui/Button';
 import Lottie from 'lottie-react';
 import Animation from '../assets/Animation.json';
 

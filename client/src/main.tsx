@@ -7,12 +7,13 @@ import { RouterProvider } from 'react-router/dom';
 import { ThemeProvider } from './providers/ThemeProvider.tsx';
 import Home from './pages/Home.tsx';
 import CodeExplainForm from './component/forms/CodeExplainForm.tsx';
+import ErrorPage from './component/Error.tsx';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    errorElement: <div>404</div>,
+    errorElement: <ErrorPage/>,
     children: [
       { index: true, element: <Home /> },
       { path: 'code-explainer', element: <CodeExplainForm/> },
