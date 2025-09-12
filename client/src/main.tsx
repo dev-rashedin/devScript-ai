@@ -9,6 +9,7 @@ import Home from './pages/Home.tsx';
 import CodeExplainForm from './component/forms/CodeExplainForm.tsx';
 import Summarizer from './pages/Summarizer.tsx';
 import ErrorPage from './pages/ErrorPage.tsx';
+import Login from './pages/Login.tsx';
 
 const router = createBrowserRouter([
   {
@@ -17,9 +18,12 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage/>,
     children: [
       { index: true, element: <Home /> },
-      { path: 'code-explainer', element: <CodeExplainForm/> },
-      { path: 'summarizer', element: <Summarizer /> },
-      // { path: 'writer', element: <WriterForm /> },
+      { path: 'login', element: <Login /> },
+      {
+        path: 'services', children: [
+          { path: 'code-explainer', element: <CodeExplainForm/> },
+          { path: 'summarizer', element: <Summarizer /> },
+      ]},
     ],
   },
 ]);

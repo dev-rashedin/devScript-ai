@@ -23,9 +23,9 @@ const Home = () => {
         {services.map((s) => (
           <div
             key={s.path}
-            className='p-6 rounded-2xl shadow flex border border-r-4 border-b-4   border-primary group  bg-card'
+            className='p-6 rounded-2xl shadow flex border border-r-4 border-b-4 border-primary group  bg-card'
           >
-            <div className='text-primary flex flex-col space-y-2'>
+            <div className='flex flex-col space-y-2'>
               {<s.icon className='w-8 h-8 hover:text-white' />}
               <h2 className='text-xl font-semibold'>{s.title}</h2>
               <p className='text-sm text-muted'>{s.desc}</p>
@@ -36,7 +36,6 @@ const Home = () => {
               >
                 <span className='absolute rounded-2xl left-0 top-0 h-full w-0 bg-primary transition-all duration-500 ease-in-out group-hover:w-full'></span>
                 <span className='text-black group-hover:text-white z-50'>
-                  {' '}
                   Check it here
                 </span>
               </Link>

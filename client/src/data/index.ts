@@ -34,7 +34,7 @@ export const services = [
   },
   {
     title: 'Email Helper',
-    desc: 'Draft clear, professional emails instantly.',
+    desc: 'Draft clear, professional emails instantly without any hassle.',
     icon: FiMail,
     path: '/email-helper',
   },
@@ -49,20 +49,20 @@ export const services = [
 
 // nav links
 export const links = [
-  { title: "Home", path: "/" },
-  { title: "Get Started", path: "/packages" },
+  { title: 'Home', path: '/' },
+  { title: 'Get Started', path: '/packages' },
   {
-    title: "Services",
+    title: 'Services ⏷',
     dropdown: [
-      { title: "Code Explainer", path: "/code-explainer" },
-      { title: "Doc Summarizer", path: "/summarizer" },
-      { title: "Article Writer", path: "/writer" },
-      { title: "Code Refactor", path: "/code-refactor" },
-      { title: "Email Helper", path: "/email-helper" },
-      { title: "Resume Assistant", path: "/resume-assistant" },
+      { title: 'Code Explainer', path: '/services/code-explainer' },
+      { title: 'Doc Summarizer', path: '/services/summarizer' },
+      { title: 'Article Writer', path: '/services/writer' },
+      { title: 'Code Refactor', path: '/services/code-refactor' },
+      { title: 'Email Helper', path: '/services/email-helper' },
+      { title: 'Resume Assistant', path: '/services/resume-assistant' },
     ],
   },
-  { title: "Blogs", path: "/blogs" },
-  { title: "Login", path: "/login" },
+  { title: 'Blogs', path: '/blogs' },
+  { title: 'Login', path: '/login' },
 ];
 

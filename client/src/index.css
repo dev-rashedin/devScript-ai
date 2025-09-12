@@ -7,6 +7,10 @@
     background-color: hsl(0, 0%, 100%);
     color: hsl(0, 0%, 0%);
 
+    .text-primary {
+      color: hsl(0, 0%, 0%);
+    }
+
     a {
       @apply text-blue-600 hover:text-blue-800;
     }
@@ -36,6 +40,10 @@
     }
     code {
       @apply bg-gray-800 text-gray-200;
+    }
+
+    .text-primary {
+      color: hsl(0, 0%, 100%);
     }
 
     a {
@@ -94,14 +102,14 @@
   }
 
   .bg-primary {
-    background-color: hsl(216, 100%, 40%);
+    background-color: hsl(216, 89%, 55%);
   }
 
-  .text-primary {
-    color: hsl(216, 100%, 60%);
+  .text-brand {
+    color: hsl(216, 99%, 50%);
   }
   .primary-outline {
-    border-color: hsl(216, 100%, 60%);
+    border-color: hsl(215, 50%, 40%);
   }
   .bg-accent {
     background-color: #10b981;
@@ -111,7 +119,7 @@
   }
 
   .border-primary {
-    border-color: hsl(216, 100%, 60%);
+    border-color: hsl(215, 50%, 40%);
   }
 
   .btn-primary {
