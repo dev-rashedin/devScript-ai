@@ -13,19 +13,19 @@ const Services = () => {
       {services.map((s) => (
         <div
           key={s.path}
-          className='p-6 rounded-2xl shadow flex border border-r-4 border-b-4 border-primary group  bg-card'
+          className='p-6 rounded-2xl shadow flex border border-r-4 border-b-4 border-primary bg-card'
         >
-          <div className='flex flex-col space-y-2'>
+          <div className='flex flex-col space-y-3'>
             {<s.icon className='w-8 h-8' />}
             <h2 className='text-xl font-semibold'>{s.title}</h2>
-            <p className='text-sm text-muted'>{s.desc}</p>
+            <p className='text-[15px] opacity-85'>{s.desc}</p>
 
             <Link
               to={s.path}
-              className='flex items-center rounded-full p-1 mt-2 relative hover:text-primary  hover:transform-y-1'
+              className='flex items-center gap-2 rounded-full mt-1 relative hover:text-primary group hover:transform-y-1'
             >
-              <span className="w-20 relative">
-                Try it out
+              <span className="relative">
+               {s.cta}
                 <AnimatedBorder />
               </span>
               <HiMiniArrowTopRightOnSquare

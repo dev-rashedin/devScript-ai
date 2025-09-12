@@ -14,41 +14,49 @@ import {
 export const services = [
   {
     title: 'Code Explainer',
-    desc: 'Paste your code and get an easy-to-understand explanation.',
+    desc: 'Paste your code and get a clear, in-depth explanation. Perfect for learning, debugging, and quickly understanding complex logic.',
     icon: FiCode,
     path: '/code-explainer',
+    cta: 'Explain Code',
   },
   {
     title: 'Doc Summarizer',
-    desc: 'Summarize long documents or articles in seconds.',
+    desc: 'Summarize documents or articles instantly. Ideal for saving time, extracting key points, and understanding content efficiently.',
     icon: FiFileText,
     path: '/summarizer',
+    cta: 'Summarize Now',
   },
   {
     title: 'Article Writer',
-    desc: 'Generate professional articles, blogs, or notes effortlessly.',
+    desc: 'Generate professional articles, blogs, or notes effortlessly. Helps produce structured, creative, and engaging content quickly.',
     icon: FiPenTool,
     path: '/writer',
+    cta: 'Write Article',
   },
   {
     title: 'Code Refactor',
-    desc: 'Improve readability and optimize code without changing functionality.',
+    desc: 'Improve and optimize your code without changing functionality. Enhances readability, reduces errors, and follows best practices.',
     icon: FiEdit3,
     path: '/code-refactor',
+    cta: 'Refactor Code',
   },
   {
     title: 'Email Helper',
-    desc: 'Draft clear, professional emails instantly without any hassle.',
+    desc: 'Draft clear, professional emails instantly without hassle. Perfect for concise, polite, and persuasive communication every time.',
     icon: FiMail,
     path: '/email-helper',
+    cta: 'Draft Email',
   },
   {
     title: 'Resume Assistant',
-    desc: 'Polish your resume or cover letter with AI suggestions.',
+    desc: 'Polish your resume or cover letter with AI expertise. Ensures professional formatting, clear phrasing and strong impact.',
     icon: FiUserCheck,
     path: '/resume-assistant',
+    cta: 'Improve Resume',
   },
 ];
+
+
 
 export const socialLinks = [
   {
