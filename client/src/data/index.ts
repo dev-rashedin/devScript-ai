@@ -1,4 +1,8 @@
 import {
+  FaGithub,
+  FaLinkedin,
+  FaFacebook,
+  FaDiscord,
   FiCode,
   FiFileText,
   FiPenTool,
@@ -46,11 +50,34 @@ export const services = [
   },
 ];
 
+export const socialLinks = [
+  {
+    href: 'https://github.com/dev-rashedin',
+    icon: FaGithub,
+    title: 'Github',
+  },
+  {
+    href: 'https://www.linkedin.com/in/dev-rashedin',
+    icon: FaLinkedin,
+    title: 'Linkedin',
+  },
+  {
+    href: 'https://www.facebook.com/rashedin06/',
+    icon: FaFacebook,
+    title: 'Facebook',
+  },
+  {
+    href: 'https://discord.com/users/dev_rashedin',
+    icon: FaDiscord,
+    title: 'Discord',
+  },
+];
+
 
 // nav links
 export const links = [
   { title: 'Home', path: '/' },
-  { title: 'Get Started', path: '/packages' },
+  { title: 'Get Started', path: '/subscription' },
   {
     title: 'Services ⏷',
     dropdown: [
@@ -62,7 +89,7 @@ export const links = [
       { title: 'Resume Assistant', path: '/services/resume-assistant' },
     ],
   },
-  { title: 'Blogs', path: '/blogs' },
+  { title: 'Blogs', path: 'https://blog.rashedin.dev' },
   { title: 'Login', path: '/login' },
 ];
 

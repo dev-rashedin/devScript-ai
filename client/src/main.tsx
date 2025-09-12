@@ -10,6 +10,7 @@ import CodeExplainForm from './component/forms/CodeExplainForm.tsx';
 import Summarizer from './pages/Summarizer.tsx';
 import ErrorPage from './pages/ErrorPage.tsx';
 import Login from './pages/Login.tsx';
+import Subscription from './pages/Subscription.tsx';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage/>,
     children: [
       { index: true, element: <Home /> },
+      { path: 'subscription', element: <Subscription /> },
       { path: 'login', element: <Login /> },
       {
         path: 'services', children: [
