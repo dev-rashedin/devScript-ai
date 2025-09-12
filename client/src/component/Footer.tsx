@@ -1,7 +1,5 @@
-
-import { links } from '../data';
+import { links, socialLinks } from '../data';
 import { Link, NavLink } from 'react-router';
-import { FaGithub, FaLinkedin, FaFacebook, FaDiscord } from '../data/icons';
 
 const Footer = () => {
   return (
@@ -52,39 +50,18 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} AI Analyzer. All rights reserved.
           </p>
           {/* social links */}
-          <div className='flex-center gap-2 md:gap-6  text-secondary'>
-            <a
-              href='https://github.com/dev-rashedin'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='text-primary hover:text-brand transition'
-            >
-              <FaGithub className='w-5 h-5' />
-            </a>
-            <a
-              href='https://www.linkedin.com/in/dev-rashedin'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='text-primary hover:text-brand transition'
-            >
-              <FaLinkedin className='w-5 h-5' />
-            </a>
-            <a
-              href='https://www.facebook.com/rashedin06/'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='text-primary hover:text-brand transition'
-            >
-              <FaFacebook className='w-5 h-5' />
-            </a>
-            <a
-              href='https://www.facebook.com/rashedin06/'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='text-primary hover:text-brand transition'
-            >
-              <FaDiscord className='w-6 h-6' />
-            </a>
+          <div className='flex-center gap-2 md:gap-6 text-secondary'>
+            {socialLinks.map(({ href, icon: Icon }) => (
+              <a
+                key={href}
+                href={href}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='text-primary hover:text-brand transition'
+              >
+                <Icon className='w-5 h-5' />
+              </a>
+            ))}
           </div>
         </section>
       </div>

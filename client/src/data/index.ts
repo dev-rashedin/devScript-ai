@@ -1,4 +1,8 @@
 import {
+  FaGithub,
+  FaLinkedin,
+  FaFacebook,
+  FaDiscord,
   FiCode,
   FiFileText,
   FiPenTool,
@@ -43,6 +47,25 @@ export const services = [
     desc: 'Polish your resume or cover letter with AI suggestions.',
     icon: FiUserCheck,
     path: '/resume-assistant',
+  },
+];
+
+export const socialLinks = [
+  {
+    href: 'https://github.com/dev-rashedin',
+    icon: FaGithub,
+  },
+  {
+    href: 'https://www.linkedin.com/in/dev-rashedin',
+    icon: FaLinkedin,
+  },
+  {
+    href: 'https://www.facebook.com/rashedin06/',
+    icon: FaFacebook,
+  },
+  {
+    href: 'https://discord.com/users/dev_rashedin',
+    icon: FaDiscord,
   },
 ];
 

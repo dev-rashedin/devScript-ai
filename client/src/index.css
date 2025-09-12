@@ -4,7 +4,7 @@
 @layer base {
   body {
     font-family: 'Inter', sans-serif;
-    background-color: hsl(0, 0%, 100%);
+    background-color: hsl(60, 100%, 98%);
     color: hsl(0, 0%, 0%);
 
     .text-primary {
@@ -32,11 +32,11 @@
     }
 
     .bg-navbar {
-      background-color: hsl(0, 0%, 95%);
+      background-color: hsl(0, 0%, 98%);
     }
 
     .bg-card {
-      background-color: hsl(0, 0%, 95%);
+      background-color: hsl(0, 0%, 100%);
     }
 
     .form-ui {
@@ -59,10 +59,10 @@
     }
 
     .text-secondary {
-      color: hsl(0, 0%, 0%);
+      color: hsl(0, 0%, 15%);
     }
     .text-muted {
-      color: hsl(0, 0%, 75%);
+      color: hsl(0, 0%, 85%);
     }
 
      .text-brand {
