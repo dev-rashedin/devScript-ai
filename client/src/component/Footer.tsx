@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router';
 
 const Footer = () => {
   return (
-    <footer className='bg-navbar h-60 lg:h-48 text-muted py-6'>
+    <footer className='bg-footer h-60 lg:h-48 text-muted py-6 lg:mt-20 '>
       <div className='w-full max-w-4xl xl:max-w-5xl mx-auto flex flex-col lg:flex-row items-start md:items-center justify-between pt-4 gap-6'>
         {/*  links */}
         <section className='flex px-8 md:gap-20 xl:gap-28 text-primary'>
