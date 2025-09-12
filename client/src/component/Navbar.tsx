@@ -8,11 +8,11 @@ const Navbar = () => {
   const { dark, toggleDark } = useTheme();
 
   return (
-    <main className='bg-navbar h-20 flex items-center sticky top-0 shadow'>
+    <main className='bg-navbar h-20 flex items-center sticky top-0 shadow z-20'>
       <nav className='flex-between boundary'>
         <Link
           to='/'
-          className='flex items-center cursor-pointer font-logo text-brand'
+          className='flex items-center cursor-pointer font-logo text-brand w-60'
         >
           <img src='/logo.png' alt='logo' className='w-20 h-20' />
           <h1 className='text-2xl font-bold -ml-2'>AI Analyzer</h1>

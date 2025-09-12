@@ -9,7 +9,19 @@
 
     .text-primary {
       color: hsl(0, 0%, 0%);
+    };
+
+    .text-secondary {
+      color: hsl(0, 100%, 100%);
     }
+
+    .text-muted {
+      color: hsl(0, 0%, 45%);
+    }
+
+     .text-brand {
+    color: hsl(221, 81%, 49%);
+  }
 
     a {
       @apply text-blue-600 hover:text-blue-800;
@@ -45,6 +57,17 @@
     .text-primary {
       color: hsl(0, 0%, 100%);
     }
+
+    .text-secondary {
+      color: hsl(0, 0%, 0%);
+    }
+    .text-muted {
+      color: hsl(0, 0%, 75%);
+    }
+
+     .text-brand {
+    color: hsl(221, 100%, 65%);
+  }
 
     a {
       @apply text-blue-400;
@@ -102,13 +125,11 @@
   }
 
   .bg-primary {
-    background-color: hsl(216, 89%, 55%);
+    background-color: hsl(221, 97%, 54%);
   }
 
-  .text-brand {
-    color: hsl(216, 97%, 53%);
-  }
-  
+ 
+
   .primary-outline {
     border-color: hsl(215, 50%, 40%);
   }
@@ -118,7 +139,7 @@
   }
 
   .border-primary {
-    border-color: hsl(215, 53%, 47%);
+    border-color: hsl(215, 52%, 40%);
   }
 
   .btn-primary {

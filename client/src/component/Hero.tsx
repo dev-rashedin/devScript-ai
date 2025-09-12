@@ -4,7 +4,7 @@ import Button from './ui/button';
 
 const Hero = () => {
   return (
-    <main className='text-center max-w-3xl min-h-[60vh] flex-col-center mx-auto py-16 space-y-1'>
+    <main className='text-center max-w-3xl min-h-[75vh] flex-col-center mx-auto py-16 space-y-2'>
       <h1 className='text-5xl md:text-6xl lg:text-7xl font-bold leading-tight'>
         AI Assistant for{' '}
       </h1>
@@ -23,7 +23,7 @@ const Hero = () => {
           }}
           className='text-5xl md:text-6xl lg:text-7xl font-bold leading-tight'
         >
-          <Highlight className='text-black dark:text-white'>
+          <Highlight className='text-secondary'>
             Developers & Writers
           </Highlight>
         </motion.h1>

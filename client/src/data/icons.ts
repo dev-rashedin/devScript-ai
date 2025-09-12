@@ -1,3 +1,4 @@
+import { FaGithub, FaLinkedin, FaFacebook, FaDiscord } from 'react-icons/fa';
 import {
   FiCode,
   FiFileText,
@@ -6,14 +7,15 @@ import {
   FiMail,
   FiUserCheck,
 } from 'react-icons/fi';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export {
+  FaGithub,
+  FaLinkedin,
+  FaFacebook,
+  FaDiscord,
   FiCode,
   FiFileText,
   FiPenTool,
-  FaGithub,
-  FaLinkedin,
   FiEdit3,
   FiMail,
   FiUserCheck,
