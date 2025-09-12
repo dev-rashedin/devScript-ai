@@ -45,3 +45,24 @@ export const services = [
     path: '/resume-assistant',
   },
 ];
+
+
+// nav links
+export const links = [
+  { title: "Home", path: "/" },
+  { title: "Get Started", path: "/packages" },
+  {
+    title: "Services",
+    dropdown: [
+      { title: "Code Explainer", path: "/code-explainer" },
+      { title: "Doc Summarizer", path: "/summarizer" },
+      { title: "Article Writer", path: "/writer" },
+      { title: "Code Refactor", path: "/code-refactor" },
+      { title: "Email Helper", path: "/email-helper" },
+      { title: "Resume Assistant", path: "/resume-assistant" },
+    ],
+  },
+  { title: "Blogs", path: "/blogs" },
+  { title: "Login", path: "/login" },
+];
+
