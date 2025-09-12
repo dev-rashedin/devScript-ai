@@ -3,6 +3,7 @@ import { useTheme } from '../hooks/useTheme';
 import { FiMoon } from 'react-icons/fi';
 import { IoSunnyOutline } from 'react-icons/io5';
 import NavLinks from './ui/navlinks';
+import MobileMenu from './ui/mobile-menu';
 
 const Navbar = () => {
   const { dark, toggleDark } = useTheme();
@@ -29,6 +30,9 @@ const Navbar = () => {
             <IoSunnyOutline className='text-xl' />
           )}
         </button>
+
+        {/* mobile menu */}
+        <MobileMenu/>
       </nav>
     </main>
   );

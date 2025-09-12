@@ -2,13 +2,14 @@ import { useState } from 'react';
 import { NavLink } from 'react-router';// your links array
 import { links } from '../../data';
 import AnimatedBorder from './animated-border';
+import ContactDropdown from './contact-dropdown';
 
 const NavLinks = () => {
   const [open, setOpen] = useState(false);
 
   return (
     <div className='hidden md:flex items-center gap-8 font-medium'>
-      <ul className='flex gap-8'>
+      <ul className='flex items-center gap-8'>
         {links.map((link) =>
           link.dropdown ? (
             <li
@@ -19,7 +20,7 @@ const NavLinks = () => {
                 setTimeout(() => setOpen(false), 300);
               }}
             >
-              <button className='cursor-pointer transition'>
+              <button className='cursor-pointer transition -mr-1'>
                 {link.title}
               </button>
 
@@ -56,12 +57,12 @@ const NavLinks = () => {
                 }
               >
                 {link.title}
-                <span className='absolute -bottom-1 h-[2px] bg-primary w-0 left-0 group-hover:w-full hover:-left-8 transition-all duration-300 ease-in-out'></span>
+              <AnimatedBorder/>
               </NavLink>
             </li>
           )
         )}
-        <li>Contact</li>
+       <ContactDropdown/>
       </ul>
     </div>
   );

@@ -54,18 +54,22 @@ export const socialLinks = [
   {
     href: 'https://github.com/dev-rashedin',
     icon: FaGithub,
+    title: 'Github',
   },
   {
     href: 'https://www.linkedin.com/in/dev-rashedin',
     icon: FaLinkedin,
+    title: 'Linkedin',
   },
   {
     href: 'https://www.facebook.com/rashedin06/',
     icon: FaFacebook,
+    title: 'Facebook',
   },
   {
     href: 'https://discord.com/users/dev_rashedin',
     icon: FaDiscord,
+    title: 'Discord',
   },
 ];
 
