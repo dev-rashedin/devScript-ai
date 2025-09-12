@@ -1,12 +1,10 @@
 import { Link } from 'react-router';
-import { useTheme } from '../hooks/useTheme';
-import { FiMoon } from 'react-icons/fi';
-import { IoSunnyOutline } from 'react-icons/io5';
 import NavLinks from './ui/navlinks';
 import MobileMenu from './ui/mobile-menu';
+import ThemeSwitcher from './ui/theme-switcher';
 
 const Navbar = () => {
-  const { dark, toggleDark } = useTheme();
+
 
   return (
     <main className='bg-navbar h-20 flex items-center sticky top-0 shadow z-20'>
@@ -23,13 +21,9 @@ const Navbar = () => {
       <NavLinks/>
 
         {/* theme switcher */}
-        <button onClick={toggleDark} className='cursor-pointer'>
-          {dark ? (
-            <FiMoon className='text-xl' />
-          ) : (
-            <IoSunnyOutline className='text-xl' />
-          )}
-        </button>
+        <div className='hidden lg:block'>
+          <ThemeSwitcher/>
+   </div>
 
         {/* mobile menu */}
         <MobileMenu/>

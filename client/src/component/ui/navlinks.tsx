@@ -1,6 +1,10 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router';// your links array
 import { links } from '../../data';
+import {
+  IoIosArrowDown,
+  IoIosArrowUp,
+} from '../../data/icons';
 import AnimatedBorder from './animated-border';
 import ContactDropdown from './contact-dropdown';
 
@@ -20,8 +24,15 @@ const NavLinks = () => {
                 setTimeout(() => setOpen(false), 300);
               }}
             >
-              <button className='cursor-pointer transition -mr-1'>
+              <button className='cursor-pointer transition -mr-1 flex-center'>
                 {link.title}
+                <span className='ml-2'>
+                                   {open ? (
+                                     <IoIosArrowUp />
+                                   ) : (
+                                     <IoIosArrowDown />
+                                   )}
+                                 </span>
               </button>
 
               {open && (

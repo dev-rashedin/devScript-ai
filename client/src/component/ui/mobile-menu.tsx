@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router';
-import { links } from '../../data'; // your links array
+import { links } from '../../data';
+import {IoCloseCircleOutline, IoIosArrowDown, IoIosArrowUp, RiMenu3Fill} from '../../data/icons';
 import ContactDropdown from './contact-dropdown';
 import AnimatedBorder from './animated-border';
+import ThemeSwitcher from './theme-switcher';
 
 const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,17 +17,21 @@ const MobileMenu = () => {
         className='flex items-center justify-center p-2'
         onClick={() => setIsOpen(!isOpen)}
       >
-        {isOpen ? '✕' : '☰'}
+        {isOpen ? (
+          <IoCloseCircleOutline size={30} />
+        ) : (
+          <RiMenu3Fill size={27} />
+        )}
       </button>
 
       {/* Mobile menu panel */}
       <div
-        className={`bg-card w-[90vw] rounded-md px-4 py-6 space-y-4 flex flex-col absolute top-12 right-0
-        transform transition-all duration-300 ease-in-out z-50
+        className={`bg-card w-60 rounded-md px-4 py-6 space-y-4 flex flex-col absolute top-12 right-0
+        transform transition-transform duration-300 ease-in-out z-50
         ${
           isOpen
-            ? 'opacity-100 translate-y-0'
-            : 'translate-y-5 opacity-0 pointer-events-none'
+            ? 'opacity-100 translate-x-0'
+            : 'translate-x-20 opacity-0 pointer-events-none'
         }`}
       >
         <ul className='flex flex-col gap-2'>
@@ -38,11 +44,15 @@ const MobileMenu = () => {
                       openDropdown === link.title ? null : link.title
                     )
                   }
-                  className='flex justify-between items-center px-4 py-2 rounded hover:bg-yellow-100 transition'
+                  className='flex items-center px-4 py-2 rounded hover:bg-yellow-100 transition'
                 >
                   {link.title}
                   <span className='ml-2'>
-                    {openDropdown === link.title ? '▴' : '▾'}
+                    {openDropdown === link.title ? (
+                      <IoIosArrowUp />
+                    ) : (
+                      <IoIosArrowDown />
+                    )}
                   </span>
                 </button>
 
@@ -53,17 +63,15 @@ const MobileMenu = () => {
                         key={sub.path}
                         to={sub.path}
                         className={({ isActive }) =>
-                          `block px-2 py-1 rounded transition ${
+                          `block text-sm px-2 py-1 rounded transition ${
                             isActive
                               ? 'text-brand font-semibold'
                               : 'text-primary'
                           } relative group`
                         }
                       >
-                        <span className='relative group'>
-                          {sub.title}
-                          <AnimatedBorder />
-                        </span>
+                        {sub.title}
+                        <AnimatedBorder />
                       </NavLink>
                     ))}
                   </div>
@@ -87,20 +95,15 @@ const MobileMenu = () => {
             )
           )}
 
-          <ContactDropdown />
+          <ContactDropdown screen='small' />
         </ul>
 
         {/* Theme switcher */}
-        <div className='w-full mx-auto border rounded-lg flex-between py-2 px-4 justify-end'>
+        <div className='w-[86%] mx-auto border rounded-lg flex-between py-2 px-4  justify-end'>
           <span className='text-xs text-muted-foreground opacity-75'>
             Theme
           </span>
-          {/* <ThemeSwitcher /> */}
-        </div>
-
-        {/* Social links */}
-        <div className='pt-4'>
-          <ContactDropdown />
+          <ThemeSwitcher />
         </div>
       </div>
     </div>

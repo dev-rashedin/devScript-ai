@@ -79,7 +79,7 @@ export const links = [
   { title: 'Home', path: '/' },
   { title: 'Get Started', path: '/subscription' },
   {
-    title: 'Services ⏷',
+    title: 'Services',
     dropdown: [
       { title: 'Code Explainer', path: '/services/code-explainer' },
       { title: 'Doc Summarizer', path: '/services/summarizer' },

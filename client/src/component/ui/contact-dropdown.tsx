@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { socialLinks } from '../../data';
+import { IoIosArrowDown, IoIosArrowUp } from '../../data/icons';
 import AnimatedBorder from './animated-border';
 
-const ContactDropdown = () => {
+const ContactDropdown = ({ screen = 'large' }: { screen?: string }) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -11,13 +12,24 @@ const ContactDropdown = () => {
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setTimeout(() => setOpen(false), 200)}
     >
-      <button className='cursor-pointer transition py-1'>
-        Contact ⏷
-        <AnimatedBorder />
+      <button
+        className={`cursor-pointer transition py-1 flex-center ${
+          screen === 'large' ? '' : 'pl-4'
+        }`}
+        onClick={() => setOpen(!open)}
+      >
+        Contact
+        <span className='ml-2'>
+          {open ? <IoIosArrowUp /> : <IoIosArrowDown />}
+        </span>
       </button>
 
       {open && (
-        <div className='absolute left-0 top-full bg-card shadow-lg rounded-xl w-40 z-50 p-4 flex flex-col gap-2'>
+        <div
+          className={`
+      flex flex-col gap-2 p-4 rounded-xl bg-card lg:shadow-lg z-50 relative  lg:absolute lg:top-full lg:left-0 lg:w-40
+    `}
+        >
           {socialLinks.map((social) => {
             const Icon = social.icon;
             return (
@@ -26,9 +38,9 @@ const ContactDropdown = () => {
                 href={social.href}
                 target='_blank'
                 rel='noopener noreferrer'
-                className='flex items-center gap-2 px-2 py-1 rounded hover:text-brand transition relative group text-primary text-sm'
+                className='flex items-center gap-3 lg:gap-2 px-2 py-1 rounded hover:text-brand transition relative group text-primary text-sm'
               >
-                <Icon className='w-5 h-5' />
+                <Icon className='w-4 h-4 lg:w-5 lg:h-5' />
                 <span className='relative group'>
                   {social.title}
                   <AnimatedBorder />
