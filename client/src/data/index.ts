@@ -50,7 +50,7 @@ export const services = [
 // nav links
 export const links = [
   { title: 'Home', path: '/' },
-  { title: 'Get Started', path: '/packages' },
+  { title: 'Get Started', path: '/subscription' },
   {
     title: 'Services ⏷',
     dropdown: [
@@ -62,7 +62,7 @@ export const links = [
       { title: 'Resume Assistant', path: '/services/resume-assistant' },
     ],
   },
-  { title: 'Blogs', path: '/blogs' },
+  { title: 'Blogs', path: 'https://blog.rashedin.dev' },
   { title: 'Login', path: '/login' },
 ];
 

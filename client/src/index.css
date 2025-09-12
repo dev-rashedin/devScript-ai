@@ -106,20 +106,19 @@
   }
 
   .text-brand {
-    color: hsl(216, 99%, 50%);
+    color: hsl(216, 97%, 53%);
   }
+  
   .primary-outline {
     border-color: hsl(215, 50%, 40%);
   }
-  .bg-accent {
-    background-color: #10b981;
-  }
+
   .text-accent {
     color: #10b981;
   }
 
   .border-primary {
-    border-color: hsl(215, 50%, 40%);
+    border-color: hsl(215, 53%, 47%);
   }
 
   .btn-primary {
