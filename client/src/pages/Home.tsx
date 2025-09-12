@@ -7,7 +7,7 @@ const Home = () => {
     <div className=''>
       <Hero />
       <Services />
-     <Benefits/>
+      <Benefits />
     </div>
   );
 };
