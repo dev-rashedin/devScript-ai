@@ -1,4 +1,11 @@
-import { FiCode, FiFileText, FiPenTool } from './icons'
+import {
+  FiCode,
+  FiFileText,
+  FiPenTool,
+  FiEdit3,
+  FiMail,
+  FiUserCheck,
+} from './icons';
 
 export const services = [
   {
@@ -20,21 +27,21 @@ export const services = [
     path: '/writer',
   },
   {
-    title: 'Article Writer',
-    desc: 'Generate professional articles, blogs, or notes effortlessly.',
-    icon: FiPenTool,
-    path: '/writer',
+    title: 'Code Refactor',
+    desc: 'Improve readability and optimize code without changing functionality.',
+    icon: FiEdit3,
+    path: '/code-refactor',
   },
   {
-    title: 'Article Writer',
-    desc: 'Generate professional articles, blogs, or notes effortlessly.',
-    icon: FiPenTool,
-    path: '/writer',
+    title: 'Email Helper',
+    desc: 'Draft clear, professional emails instantly.',
+    icon: FiMail,
+    path: '/email-helper',
   },
   {
-    title: 'Article Writer',
-    desc: 'Generate professional articles, blogs, or notes effortlessly.',
-    icon: FiPenTool,
-    path: '/writer',
+    title: 'Resume Assistant',
+    desc: 'Polish your resume or cover letter with AI suggestions.',
+    icon: FiUserCheck,
+    path: '/resume-assistant',
   },
 ];
