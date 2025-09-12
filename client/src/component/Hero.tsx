@@ -32,8 +32,8 @@ const Hero = () => {
       </p>
       {/* call to action */}
       <section className='flex-center gap-4 mt-2 lg:mt-6'>
-        <Button label='Get Started' type='primary' />
-        <Button label='View Services' type='secondary' />
+        <Button label='Get Started' type='primary'/>
+        <Button label='View Services' type='secondary' href='#services'/>
       </section>
 
       <p className='text-muted text-[14px] mt-4 text-center'>

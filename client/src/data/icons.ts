@@ -11,6 +11,8 @@ import {
 import { RiMenu3Fill } from 'react-icons/ri';
 import { IoCloseCircleOutline, IoSunnyOutline } from 'react-icons/io5';
 import { IoIosArrowUp, IoIosArrowDown } from 'react-icons/io';
+import { CgArrowTopRight } from 'react-icons/cg';
+import { HiMiniArrowTopRightOnSquare } from 'react-icons/hi2';
 
 export {
   FaGithub,
@@ -29,4 +31,6 @@ export {
   FiMoon,
   IoIosArrowUp,
   IoIosArrowDown,
+  HiMiniArrowTopRightOnSquare,
+  CgArrowTopRight,
 };

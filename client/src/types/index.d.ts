@@ -23,5 +23,6 @@ declare type TExplanation = { explanation: string };
 declare interface ButtonProps {
   label: string;
   type: string;
+  href?: string;
   onClick?: () => void;
 }
