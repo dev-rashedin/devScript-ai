@@ -85,7 +85,7 @@ export const socialLinks = [
 // nav links
 export const links = [
   { title: 'Home', path: '/' },
-  { title: 'Get Started', path: '/subscription' },
+  { title: 'Subscription', path: '/subscription' },
   {
     title: 'Services',
     dropdown: [

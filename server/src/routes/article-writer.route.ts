@@ -1,4 +1,3 @@
-import { client } from '../lib/utils';
 import express, { Request, Response } from 'express';
 import {
   asyncHandler,
@@ -6,16 +5,17 @@ import {
   BadRequestError,
 } from 'express-error-toolkit';
 import { StatusCodes } from 'http-status-toolkit';
+import { client } from '../lib/utils';
 
 const codeRefactorRoute = express.Router();
 
 codeRefactorRoute.post(
-  '/refactor-code',
+  '/generate-article',
   asyncHandler(async (req: Request, res: Response) => {
-    const { code, language } = req.body;
+    const { topic } = req.body;
 
-    if (!code || !language) {
-      throw new BadRequestError('Please provide code and language');
+    if (!topic) {
+      throw new BadRequestError('Please provide a topic for the article');
     }
 
     const response = await client.chat.completions.create({
@@ -23,22 +23,22 @@ codeRefactorRoute.post(
       messages: [
         {
           role: 'user',
-          content: `Please refactor this ${language} code to be optimized, cleaner, and follow best practices:\n\n\`\`\`${language}\n${code}\n\`\`\``,
+          content: `Write a well-structured article on the following topic:\n\n"${topic}"\n\nThe article should include an introduction, main points, and a conclusion.`,
         },
       ],
-      temperature: 0.3,
-      max_tokens: 800,
+      temperature: 0.7,
+      max_tokens: 1200,
     });
 
-    const refactoredCode = response?.choices[0]?.message?.content;
+    const article = response?.choices[0]?.message?.content;
 
-    if (!refactoredCode) {
-      throw new NotFoundError('No refactored code found');
+    if (!article) {
+      throw new NotFoundError('No article generated');
     }
 
     res.status(StatusCodes.OK).json({
-      refactoredCode,
-      language,
+      article,
+      topic,
     });
   })
 );
