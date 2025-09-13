@@ -1,4 +1,4 @@
-import { client } from '@/lib/utils';
+import { client } from '../lib/utils';
 import express, { Request, Response } from 'express';
 import {
   asyncHandler,
