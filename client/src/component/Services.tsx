@@ -21,8 +21,8 @@ const Services = () => {
             <p className='text-[15px] opacity-85'>{s.desc}</p>
 
             <Link
-              to={s.path}
-              className='flex items-center gap-2 rounded-full mt-1 relative hover:text-primary group hover:transform-y-1'
+              to={`/services/${s.path}`}
+              className='flex items-center gap-2 rounded-full mt-1 relative group hover:transform-y-1'
             >
               <span className="relative">
                {s.cta}

@@ -12,7 +12,7 @@ import ErrorPage from './pages/ErrorPage.tsx';
 import Login from './pages/Login.tsx';
 import Subscription from './pages/Subscription.tsx';
 import CodeRefactorForm from './component/forms/CodeRefactorForm.tsx';
-import ArticleWriterForm from './component/forms/ArticleWriterForm.tsx';
+import ArticleGeneratorForm from './component/forms/ArticleGeneratorForm.tsx';
 
 const router = createBrowserRouter([
   {
@@ -28,7 +28,7 @@ const router = createBrowserRouter([
           { path: 'code-explainer', element: <CodeExplainForm/> },
           { path: 'doc-summarizer', element: <Summarizer /> },
           { path: 'code-refactor', element: <CodeRefactorForm /> },
-          {path: 'article-writer', element: <ArticleWriterForm/>},
+          {path: 'article-generator', element: <ArticleGeneratorForm/>},
       ]},
     ],
   },

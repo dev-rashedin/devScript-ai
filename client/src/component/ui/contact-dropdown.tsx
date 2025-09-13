@@ -38,7 +38,7 @@ const ContactDropdown = ({ screen = 'large' }: { screen?: string }) => {
                 href={social.href}
                 target='_blank'
                 rel='noopener noreferrer'
-                className='flex items-center gap-3 lg:gap-2 px-2 py-1 rounded hover:text-brand transition relative group text-primary text-sm'
+                className='flex items-center gap-3 px-2 py-1 rounded hover:text-brand transition relative group text-primary text-sm'
               >
                 <Icon className='w-4 h-4 lg:w-5 lg:h-5' />
                 <span className='relative group'>

@@ -6,7 +6,7 @@ import LoadingDots from '../ui/loading-dots';
 import Button from '../ui/button';
 import CodeExplanation from '../CodeExplanation';
 
-const ArticleWriterForm = () => {
+const ArticleGeneratorForm = () => {
   const [formState, formAction, isPending] = useActionState(writeArticle, null);
   const [topic, setTopic] = useState('');
 
@@ -46,4 +46,4 @@ const ArticleWriterForm = () => {
   );
 };
 
-export default ArticleWriterForm;
+export default ArticleGeneratorForm;

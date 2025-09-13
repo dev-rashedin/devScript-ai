@@ -28,7 +28,7 @@ html {
   }
 
     a {
-      @apply text-blue-600 hover:text-blue-800;
+      @apply text-blue-600;
     }
 
     code {
@@ -53,7 +53,7 @@ html {
 
     .form-ui {
       background-color: hsl(0, 0%, 98%);
-      @apply w-full max-w-4xl mx-auto p-12 rounded-2xl shadow ;
+      @apply w-full max-w-5xl mx-auto p-12 rounded-2xl shadow ;
     }
   }
 
@@ -129,7 +129,7 @@ html {
   }
 
   .prose table {
-    ;
+    border: 1px solid hsl(0, 0%, 85%);
   }
 
   .prose code {
