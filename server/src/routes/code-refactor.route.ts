@@ -7,9 +7,9 @@ import {
 } from 'express-error-toolkit';
 import { StatusCodes } from 'http-status-toolkit';
 
-const codeRefactorRoute = express.Router();
+const codeRefactorRouter = express.Router();
 
-codeRefactorRoute.post(
+codeRefactorRouter.post(
   '/refactor-code',
   asyncHandler(async (req: Request, res: Response) => {
     const { code, language } = req.body;
@@ -43,4 +43,4 @@ codeRefactorRoute.post(
   })
 );
 
-export default codeRefactorRoute;
+export default codeRefactorRouter;

@@ -7,9 +7,9 @@ import {
 import { StatusCodes } from 'http-status-toolkit';
 import { client } from '../lib/utils';
 
-const codeAnalyzerRoute = express.Router();
+const codeAnalyzerRouter = express.Router();
 
-codeAnalyzerRoute.post(
+codeAnalyzerRouter.post(
   '/explain-code',
   asyncHandler(async (req: Request, res: Response) => {
     const { code, language } = req.body;
@@ -43,4 +43,4 @@ codeAnalyzerRoute.post(
   })
 );
 
-export default codeAnalyzerRoute;
+export default codeAnalyzerRouter;

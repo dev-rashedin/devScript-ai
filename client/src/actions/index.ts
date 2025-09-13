@@ -37,3 +37,9 @@ export async function refactor(_prevState: unknown, formData: FormData) {
   const result = await fetchAction('/refactor-code', { code, language });
   return result;
 }
+
+export async function writeArticle(_prevState: unknown, formData: FormData) {
+  const topic = formData.get('topic');
+  const result = await fetchAction('/write-article', { topic });
+  return result;
+}
