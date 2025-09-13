@@ -40,6 +40,6 @@ export async function refactor(_prevState: unknown, formData: FormData) {
 
 export async function writeArticle(_prevState: unknown, formData: FormData) {
   const topic = formData.get('topic');
-  const result = await fetchAction('/write-article', { topic });
+  const result = await fetchAction('/generate-article', { topic });
   return result;
 }

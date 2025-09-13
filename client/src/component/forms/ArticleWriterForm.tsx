@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { writeArticle } from '../../actions';
 import Error from '../Error';
 import LoadingDots from '../ui/loading-dots';
+import Button from '../ui/button';
+import CodeExplanation from '../CodeExplanation';
 
 const ArticleWriterForm = () => {
   const [formState, formAction, isPending] = useActionState(writeArticle, null);
@@ -23,21 +25,23 @@ const ArticleWriterForm = () => {
         />
 
         {/* submit button */}
-        <button type='submit' className='mt-4 btn-primary'>
-          {isPending ? 'Generating...' : 'Generate Article'}
-        </button>
-      </form>
+        <Button
+          label={isPending ? 'Generating...' : 'Generate Article'}
+          type='primary'
+          isSubmit
+        />
 
-      {/* results */}
-      {isPending ? (
-        <LoadingDots />
-      ) : formState?.success ? (
-        <div className='mt-6 whitespace-pre-wrap leading-relaxed'>
-          {formState.data.article}
-        </div>
-      ) : (
-        formState?.success === false && <Error error={formState.error} />
-      )}
+        {/* results */}
+        {isPending ? (
+          <LoadingDots />
+        ) : formState?.success ? (
+          <div className='mt-6 whitespace-pre-wrap leading-relaxed'>
+            <CodeExplanation explanation={formState.data.article} />
+          </div>
+        ) : (
+          formState?.success === false && <Error error={formState.error} />
+        )}
+      </form>
     </div>
   );
 };
