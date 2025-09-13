@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@number-flow/react": "^0.5.10",
     "clsx": "^2.1.1",
     "highlight.js": "^11.11.1",
     "lottie-react": "^2.4.1",
