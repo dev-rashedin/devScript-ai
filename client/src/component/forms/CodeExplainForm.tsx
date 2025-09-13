@@ -9,7 +9,7 @@ import Button from '../ui/button';
 
 const CodeExplainForm = () => {
   const [formState, formAction, isPending] = useActionState(explain, null);
-  const [code, setCode] = useState(''); // local state
+  const [code, setCode] = useState('');
 
   return (
     <div className='pt-20'>

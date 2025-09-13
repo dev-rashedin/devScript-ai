@@ -85,13 +85,13 @@ export const socialLinks = [
 // nav links
 export const links = [
   { title: 'Home', path: '/' },
-  { title: 'Get Started', path: '/subscription' },
+  { title: 'Subscription', path: '/subscription' },
   {
     title: 'Services',
     dropdown: [
       { title: 'Code Explainer', path: '/services/code-explainer' },
-      { title: 'Doc Summarizer', path: '/services/summarizer' },
-      { title: 'Article Writer', path: '/services/writer' },
+      { title: 'Doc Summarizer', path: '/services/doc-summarizer' },
+      { title: 'Article Writer', path: '/services/article-writer' },
       { title: 'Code Refactor', path: '/services/code-refactor' },
       { title: 'Email Helper', path: '/services/email-helper' },
       { title: 'Resume Assistant', path: '/services/resume-assistant' },

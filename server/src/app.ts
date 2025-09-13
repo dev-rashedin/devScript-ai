@@ -5,9 +5,10 @@ import { notFoundHandler, globalErrorHandler } from 'express-error-toolkit';
 import { StatusCodes } from 'http-status-toolkit';
 import helmet from 'helmet';
 
-import codeAnalyzer from './routes/code-analyze.route';
-import codeRefactor from './routes/code-refactor.route';
+import codeAnalyzerRouter from './routes/code-analyze.route';
+import codeRefactorRouter from './routes/code-refactor.route';
 import { corsOption, limiter } from './lib/utils';
+import articleWriterRoute from './routes/article-writer.route';
 
 const app = express();
 
@@ -21,8 +22,9 @@ app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true }));
 
 // routes
-app.use('/api', codeAnalyzer);
-app.use('/api', codeRefactor);
+app.use('/api', codeAnalyzerRouter);
+app.use('/api', codeRefactorRouter);
+app.use('/api', articleWriterRoute);
 
 // home route
 app.get('/', (_req: Request, res: Response) => {
