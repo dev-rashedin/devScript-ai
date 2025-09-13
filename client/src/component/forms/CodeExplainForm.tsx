@@ -38,15 +38,15 @@ const CodeExplainForm = () => {
         <button type='submit' className='mt-4 btn-primary'>
           {isPending ? 'Explaining...' : 'Explain Code'}
         </button>
-      </form>
 
-      {isPending ? (
-        <LoadingDots />
-      ) : formState?.success ? (
-        <CodeExplanation explanation={formState.data.explanation} />
-      ) : (
-        formState?.success === false && <Error error={formState.error} />
-      )}
+        {isPending ? (
+          <LoadingDots />
+        ) : formState?.success ? (
+          <CodeExplanation explanation={formState.data.explanation} />
+        ) : (
+          formState?.success === false && <Error error={formState.error} />
+        )}
+      </form>
     </div>
   );
 };

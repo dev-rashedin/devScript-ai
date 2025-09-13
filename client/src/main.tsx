@@ -11,6 +11,7 @@ import Summarizer from './pages/Summarizer.tsx';
 import ErrorPage from './pages/ErrorPage.tsx';
 import Login from './pages/Login.tsx';
 import Subscription from './pages/Subscription.tsx';
+import CodeRefactorForm from './component/forms/CodeRefactorForm.tsx';
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
         path: 'services', children: [
           { path: 'code-explainer', element: <CodeExplainForm/> },
           { path: 'summarizer', element: <Summarizer /> },
+          {path: 'code-refactor', element: <CodeRefactorForm />},
       ]},
     ],
   },

@@ -35,15 +35,15 @@ const CodeRefactorForm = () => {
         <button type='submit' className='mt-4 btn-primary'>
           {isPending ? 'Refactoring...' : 'Refactor Code'}
         </button>
+        
+        {isPending ? (
+          <LoadingDots />
+        ) : formState?.success ? (
+          <CodeExplanation explanation={formState.data.refactoredCode} />
+        ) : (
+          formState?.success === false && <Error error={formState.error} />
+        )}
       </form>
-
-      {isPending ? (
-        <LoadingDots />
-      ) : formState?.success ? (
-        <CodeExplanation explanation={formState.data.refactoredCode} />
-      ) : (
-        formState?.success === false && <Error error={formState.error} />
-      )}
     </div>
   );
 };
