@@ -1,23 +1,21 @@
 import { useActionState } from 'react';
 import { useState } from 'react';
-import { explain } from '../../actions';
+import { refactor } from '../../actions';
 import Error from '../Error';
 import CodeExplanation from '../CodeExplanation';
 import LoadingDots from '../ui/loading-dots';
 import LanguageSelect from '../ui/language-select';
 import Button from '../ui/button';
 
-const CodeExplainForm = () => {
-  const [formState, formAction, isPending] = useActionState(explain, null);
-  const [code, setCode] = useState(''); // local state
+const CodeRefactorForm = () => {
+  const [formState, formAction, isPending] = useActionState(refactor, null);
+  const [code, setCode] = useState('');
 
   return (
     <div className='pt-20'>
       <form action={formAction} className='form-ui '>
-        {/* select box */}
         <LanguageSelect />
 
-        {/* text area */}
         <label className='block mb-2 font-semibold'>Your Code:</label>
         <textarea
           name='code'
@@ -29,7 +27,7 @@ const CodeExplainForm = () => {
         />
 
         <Button
-          label={isPending ? 'Explaining...' : 'Explain Code'}
+          label={isPending ? 'Refactoring...' : 'Refactor Code'}
           type='primary'
           isSubmit
           className='mt-4'
@@ -38,7 +36,7 @@ const CodeExplainForm = () => {
         {isPending ? (
           <LoadingDots />
         ) : formState?.success ? (
-          <CodeExplanation explanation={formState.data.explanation} />
+          <CodeExplanation explanation={formState.data.refactoredCode} />
         ) : (
           formState?.success === false && <Error error={formState.error} />
         )}
@@ -46,4 +44,5 @@ const CodeExplainForm = () => {
     </div>
   );
 };
-export default CodeExplainForm;
+
+export default CodeRefactorForm;

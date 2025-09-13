@@ -144,8 +144,6 @@ html {
     background-color: hsl(221, 97%, 54%);
   }
 
- 
-
   .primary-outline {
     border-color: hsl(215, 50%, 40%);
   }
@@ -158,8 +156,7 @@ html {
     border-color: hsl(215, 52%, 40%);
   }
 
-  .btn-primary {
-    background-color: hsl(276, 100%, 43%);
-    @apply px-6 py-2 rounded-lg cursor-pointer font-semibold hover:bg-purple-800 text-white transition disabled:opacity-50;
+  .text-area {
+    @apply border rounded-lg w-full p-3 font-mono text-sm bg-transparent min-h-[250px] placeholder:text-gray-400 placeholder:text-base
   }
 }

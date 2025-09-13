@@ -1,6 +1,5 @@
-const Button = ({ label, type, href, onClick }: ButtonProps) => {
-  let buttonClass =
-    'px-4 py-2 rounded-lg font-semibold text-sm lg:text-base cursor-pointer w-40 h-11 relative group overflow-hidden';
+const Button = ({ label, type, href, onClick, isSubmit = false, className = '' }: ButtonProps) => {
+  let buttonClass = `group relative inline-block py-2 w-36 font-semibold rounded-lg hover:shadow-lg cursor-pointer transition duration-300 ease-in-out ${className}`;
 
   if (type === 'primary') {
     buttonClass += ' text-white bg-primary';
@@ -12,7 +11,7 @@ const Button = ({ label, type, href, onClick }: ButtonProps) => {
     <>
       <span className='relative z-10'>{label}</span>
       <span
-        className={`absolute inset-0 w-0 ${
+        className={`absolute inset-0 w-0 rounded-lg ${
           type === 'primary' ? 'bg-blue-800' : 'bg-secondary'
         } transition-[width] duration-500 ease-in-out group-hover:w-full origin-left z-0`}
       />
@@ -26,6 +25,15 @@ const Button = ({ label, type, href, onClick }: ButtonProps) => {
       </a>
     );
   }
+
+  if(isSubmit) {
+    return (
+      <button type='submit' className={buttonClass}>
+        {content}
+      </button>
+    );
+  }
+
 
   return (
     <button className={buttonClass} onClick={onClick}>

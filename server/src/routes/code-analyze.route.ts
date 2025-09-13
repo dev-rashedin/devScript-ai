@@ -5,7 +5,7 @@ import {
   BadRequestError,
 } from 'express-error-toolkit';
 import { StatusCodes } from 'http-status-toolkit';
-import { client } from '@/lib/utils';
+import { client } from '../lib/utils';
 
 const codeAnalyzer = express.Router();
 
