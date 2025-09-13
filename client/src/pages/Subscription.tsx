@@ -84,7 +84,7 @@ const PricingSwitch = ({ onSwitch }: { onSwitch: (value: string) => void }) => {
       <div className='relative z-50 mx-auto flex w-fit rounded-full bg-neutral-50 border border-gray-200 p-1'>
         <button
           onClick={() => handleSwitch('0')}
-          className={`relative z-10 w-fit sm:h-12 h-10 rounded-full sm:px-6 px-3 sm:py-2 py-1 font-medium transition-colors ${
+          className={`relative z-10 w-fit sm:h-12 h-10 rounded-full sm:px-6 px-3 sm:py-2 py-1 font-medium transition-colors cursor-pointer ${
             selected === '0'
               ? 'text-white'
               : 'text-muted-foreground hover:text-black'
@@ -93,7 +93,7 @@ const PricingSwitch = ({ onSwitch }: { onSwitch: (value: string) => void }) => {
           {selected === '0' && (
             <motion.span
               layoutId={'switch'}
-              className='absolute top-0 left-0 sm:h-12 h-10 w-full rounded-full border-4 shadow-sm bg-gradient-to-tr from-blue-600 via-blue-500 to-blue-400'
+              className='absolute top-0 left-0 sm:h-12 h-10 w-full rounded-full border-4 shadow-sm border-blue-500 primary-gradient'
               transition={{ type: 'spring', stiffness: 500, damping: 30 }}
             />
           )}
@@ -102,7 +102,7 @@ const PricingSwitch = ({ onSwitch }: { onSwitch: (value: string) => void }) => {
 
         <button
           onClick={() => handleSwitch('1')}
-          className={`relative z-10 w-fit sm:h-12 h-8 flex-shrink-0 rounded-full sm:px-6 px-3 sm:py-2 py-1 font-medium transition-colors ${
+          className={`relative z-10 w-fit sm:h-12 h-8 flex-shrink-0 rounded-full sm:px-6 px-3 sm:py-2 py-1 font-medium transition-colors cursor-pointer ${
             selected === '1'
               ? 'text-white'
               : 'text-muted-foreground hover:text-black'
@@ -111,7 +111,7 @@ const PricingSwitch = ({ onSwitch }: { onSwitch: (value: string) => void }) => {
           {selected === '1' && (
             <motion.span
               layoutId={'switch'}
-              className='absolute top-0 left-0 sm:h-12 h-10 w-full rounded-full border-4 shadow-sm shadow-blue-600 border-blue-600 bg-gradient-to-t from-blue-500 via-blue-400 to-blue-600'
+              className='absolute top-0 left-0 sm:h-12 h-10 w-full rounded-full border-4 shadow-sm border-blue-500 primary-gradient'
               transition={{ type: 'spring', stiffness: 500, damping: 30 }}
             />
           )}

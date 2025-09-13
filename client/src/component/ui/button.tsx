@@ -1,5 +1,15 @@
-const Button = ({ label, type, href, onClick, isSubmit = false, className = '' }: ButtonProps) => {
-  let buttonClass = `group relative inline-block py-2 w-36 font-semibold rounded-lg hover:shadow-lg cursor-pointer transition duration-300 ease-in-out ${className}`;
+import { Link } from 'react-router';
+import type { ButtonProps } from '../../types';
+
+const Button = ({
+  label,
+  type,
+  href,
+  onClick,
+  isSubmit = false,
+  className = '',
+}: ButtonProps) => {
+  let buttonClass = `group relative flex-center py-2 w-36 h-11 font-semibold rounded-lg hover:shadow-lg cursor-pointer transition duration-300 ease-in-out ${className}`;
 
   if (type === 'primary') {
     buttonClass += ' text-white bg-primary';
@@ -26,7 +36,7 @@ const Button = ({ label, type, href, onClick, isSubmit = false, className = '' }
     );
   }
 
-  if(isSubmit) {
+  if (isSubmit) {
     return (
       <button type='submit' className={buttonClass}>
         {content}
@@ -34,10 +44,17 @@ const Button = ({ label, type, href, onClick, isSubmit = false, className = '' }
     );
   }
 
+  if (label === 'Get Started') {
+    return (
+      <Link to='/subscription' className={buttonClass} onClick={onClick}>
+       {content}
+      </Link>
+    );
+  }
 
   return (
     <button className={buttonClass} onClick={onClick}>
-     {content}
+      {content}
     </button>
   );
 };

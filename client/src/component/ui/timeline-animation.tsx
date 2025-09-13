@@ -1,16 +1,9 @@
-import { type HTMLMotionProps, motion, useInView } from 'motion/react';
+import { motion, useInView } from 'motion/react';
 import type React from 'react';
-import type { Variants } from 'motion/react';
+import type { TimelineContentProps } from '../../types';
 
-type TimelineContentProps<T extends keyof HTMLElementTagNameMap> = {
-  children?: React.ReactNode;
-  animationNum: number;
-  className?: string;
-  timelineRef: React.RefObject<HTMLElement | null>;
-  as?: T;
-  customVariants?: Variants;
-  once?: boolean;
-} & HTMLMotionProps<T>;
+
+
 
 export const TimelineContent = <T extends keyof HTMLElementTagNameMap = 'div'>({
   children,
