@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import { Card, CardContent, CardHeader } from '../component/ui/card';
 import { TimelineContent } from '../component/ui/timeline-animation';
 import NumberFlow from '@number-flow/react';
 import { Briefcase, CheckCheck, Database, Server } from 'lucide-react';
@@ -93,7 +93,7 @@ const PricingSwitch = ({ onSwitch }: { onSwitch: (value: string) => void }) => {
           {selected === '0' && (
             <motion.span
               layoutId={'switch'}
-              className='absolute top-0 left-0 sm:h-12 h-10 w-full rounded-full border-4 shadow-sm shadow-blue-600 border-blue-600 bg-gradient-to-t from-blue-500 via-blue-400 to-blue-600'
+              className='absolute top-0 left-0 sm:h-12 h-10 w-full rounded-full border-4 shadow-sm bg-gradient-to-tr from-blue-600 via-blue-500 to-blue-400'
               transition={{ type: 'spring', stiffness: 500, damping: 30 }}
             />
           )}
@@ -155,13 +155,13 @@ export default function Subscription() {
     <div className='px-4 pt-20 min-h-screen mx-auto relative' ref={pricingRef}>
       <div
         className='absolute top-0 left-[10%] right-[10%] w-[80%] h-full z-0'
-        style={{
-          backgroundImage: `
-        radial-gradient(circle at center, #206ce8 0%, transparent 70%)
-      `,
-          opacity: 0.6,
-          mixBlendMode: 'multiply',
-        }}
+      //   style={{
+      //     backgroundImage: `
+      //   radial-gradient(circle at center, #206ce8 0%, transparent 70%)
+      // `,
+      //     opacity: 0.6,
+      //     mixBlendMode: 'multiply',
+      //   }}
       />
 
       <div className='text-center mb-6 max-w-3xl mx-auto'>
@@ -170,17 +170,17 @@ export default function Subscription() {
           animationNum={0}
           timelineRef={pricingRef}
           customVariants={revealVariants}
-          className='md:text-6xl sm:text-4xl text-3xl font-medium text-gray-900 mb-4'
+          className='md:text-6xl sm:text-4xl text-3xl font-medium mb-4'
         >
-          Plans that works best for your{' '}
+          Plans that works <br />{' '}
           <TimelineContent
             as='span'
             animationNum={1}
             timelineRef={pricingRef}
             customVariants={revealVariants}
-            className='border border-dashed border-blue-500 px-2 py-1 rounded-xl bg-blue-100 capitalize inline-block'
+            className=' px-2 py-1 rounded-xl bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 capitalize inline-block mt-1'
           >
-            business
+            best for your
           </TimelineContent>
         </TimelineContent>
 
@@ -189,7 +189,7 @@ export default function Subscription() {
           animationNum={2}
           timelineRef={pricingRef}
           customVariants={revealVariants}
-          className='sm:text-base text-sm text-gray-600 sm:w-[70%] w-[80%] mx-auto'
+          className='sm:text-base text-sm text-muted sm:w-[70%] w-[80%] mx-auto'
         >
           Trusted by millions, We help teams all around the world, Explore which
           option is right for you.
