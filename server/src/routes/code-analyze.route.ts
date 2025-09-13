@@ -5,21 +5,13 @@ import {
   BadRequestError,
 } from 'express-error-toolkit';
 import { StatusCodes } from 'http-status-toolkit';
-import OpenAI from 'openai';
+import { client } from '@/lib/utils';
 
-const codeRouter = express.Router();
+const codeAnalyzer = express.Router();
 
-const API_KEY = process.env.OPENAI_API_KEY;
-if (!API_KEY) {
-  throw new Error('OPENAI_API_KEY is missing in environment variables');
-}
 
-const client = new OpenAI({
-  baseURL: 'https://api.studio.nebius.com/v1/',
-  apiKey: API_KEY,
-});
 
-codeRouter.post(
+codeAnalyzer.post(
   '/explain-code',
   asyncHandler(async (req: Request, res: Response) => {
     const { code, language } = req.body;
@@ -53,4 +45,4 @@ codeRouter.post(
   })
 );
 
-export default codeRouter;
+export default codeAnalyzer;

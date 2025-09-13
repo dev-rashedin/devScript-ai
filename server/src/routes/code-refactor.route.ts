@@ -1,3 +1,4 @@
+import { client } from '@/lib/utils';
 import express, { Request, Response } from 'express';
 import {
   asyncHandler,
@@ -7,11 +8,10 @@ import {
 import { StatusCodes } from 'http-status-toolkit';
 
 
-const codeRouter = express.Router();
+const codeRefactor = express.Router();
 
 
-
-codeRouter.post(
+codeRefactor.post(
   '/refactor-code',
   asyncHandler(async (req: Request, res: Response) => {
     const { code, language } = req.body;
@@ -44,3 +44,5 @@ codeRouter.post(
     });
   })
 );
+
+export default codeRefactor;
