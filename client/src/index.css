@@ -154,9 +154,13 @@ html {
 
   .border-primary {
     border-color: hsl(215, 52%, 40%);
-  }
+  };
 
   .text-area {
     @apply border rounded-lg w-full p-3 font-mono text-sm bg-transparent min-h-[250px] placeholder:text-gray-400 placeholder:text-base
+  };
+
+  .primary-gradient {
+   @apply bg-gradient-to-tr from-blue-600 via-blue-500 to-blue-400
   }
 }

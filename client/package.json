@@ -10,9 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@number-flow/react": "^0.5.10",
     "clsx": "^2.1.1",
     "highlight.js": "^11.11.1",
     "lottie-react": "^2.4.1",
+    "lucide-react": "^0.544.0",
     "motion": "^12.23.12",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
