@@ -1,5 +1,4 @@
 import { Link } from 'react-router';
-import type { ButtonProps } from '../../types';
 
 const Button = ({
   label,
