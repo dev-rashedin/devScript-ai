@@ -4,6 +4,8 @@ import { explain } from '../../actions';
 import Error from '../Error';
 import CodeExplanation from '../CodeExplanation';
 import LoadingDots from '../ui/loading-dots';
+import LanguageSelect from '../ui/language-select';
+import Button from '../ui/button';
 
 const CodeExplainForm = () => {
   const [formState, formAction, isPending] = useActionState(explain, null);
@@ -13,15 +15,7 @@ const CodeExplainForm = () => {
     <div className='pt-20'>
       <form action={formAction} className='form-ui '>
         {/* select box */}
-        <label className='block mb-2 font-semibold'>Language:</label>
-        <select name='language' className='border rounded-lg p-2 w-full mb-4 '>
-          <option value='javascript'>JavaScript</option>
-          <option value='typescript'>TypeScript</option>
-          <option value='python'>Python</option>
-          <option value='java'>Java</option>
-          <option value='golang'>Golang</option>
-          <option value='rust'>Rust</option>
-        </select>
+        <LanguageSelect />
 
         {/* text area */}
         <label className='block mb-2 font-semibold'>Your Code:</label>
@@ -31,13 +25,15 @@ const CodeExplainForm = () => {
           placeholder='Paste your code here...'
           value={code}
           onChange={(e) => setCode(e.target.value)}
-          className='border rounded-lg w-full p-3 font-mono text-sm bg-transparent min-h-[250px] placeholder:text-gray-400 placeholder:text-base'
+          className='text-area'
         />
 
-        {/* submit button */}
-        <button type='submit' className='mt-4 btn-primary'>
-          {isPending ? 'Explaining...' : 'Explain Code'}
-        </button>
+        <Button
+          label={isPending ? 'Explaining...' : 'Explain Code'}
+          type='primary'
+          isSubmit
+          className='mt-4'
+        />
 
         {isPending ? (
           <LoadingDots />

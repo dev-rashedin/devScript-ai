@@ -24,5 +24,7 @@ declare interface ButtonProps {
   label: string;
   type: string;
   href?: string;
+  isSubmit?: boolean;
   onClick?: () => void;
+  className?: string;
 }
