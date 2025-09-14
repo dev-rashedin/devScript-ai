@@ -5,7 +5,7 @@ import rateLimit from 'express-rate-limit';
 
 // cors option
 export const corsOption = {
-  origin: process.env.CLIENT_URL || 'http://localhost:5173',
+  origin: process.env.CLIENT_URL || 'http://localhost:3000',
   credentials: true,
 };
 
