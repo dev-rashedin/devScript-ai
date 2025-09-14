@@ -1,14 +1,23 @@
 import 'dotenv/config';
+import cors from 'cors';
 import OpenAI from 'openai';
 import rateLimit from 'express-rate-limit';
 
 
 // cors option
-export const corsOption = {
-  origin: process.env.CLIENT_URL || 'http://localhost:3000',
+
+const allowedOrigins = ['http://localhost:5173', process.env.CLIENT_URL || ''];
+
+export const corsOption: cors.CorsOptions = {
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   credentials: true,
 };
-
 // rate limit
 export const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
