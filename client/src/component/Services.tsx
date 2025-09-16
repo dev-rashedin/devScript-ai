@@ -5,9 +5,9 @@ import AnimatedBorder from './ui/AnimatedBorder';
 
 const Services = () => {
   return (
-    <main id='services' className='max-w-6xl mx-auto'>
+    <main id='services' className='w-full max-w-6xl mx-auto'>
       <h2 className='text-center my-8'>Explore Our Services</h2>
-      <section className=' grid gap-6 md:grid-cols-3'>
+      <section className=' grid gap-6 md:grid-cols-2 lg:grid-cols-3'>
         {services.map((s) => (
           <div
             key={s.path}

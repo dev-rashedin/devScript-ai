@@ -20,7 +20,7 @@ html {
     }
 
     .text-muted {
-      color: hsl(0, 0%, 45%);
+      color: hsl(0, 0%, 25%);
     }
 
      .text-brand {
@@ -74,7 +74,7 @@ html {
       color: hsl(0, 0%, 15%);
     }
     .text-muted {
-      color: hsl(0, 0%, 85%);
+      color: hsl(0, 0%, 87%);
     }
 
      .text-brand {
@@ -156,6 +156,10 @@ html {
     @apply container mx-auto px-2 md:px-4 lg:px-8 xl:px-12;
   }
 
+  .wall {
+    @apply max-w-6xl mx-auto;
+  }
+
   .bg-primary {
     background-color: hsl(221, 97%, 54%);
   }
@@ -166,6 +170,10 @@ html {
 
   .text-accent {
     color: #10b981;
+  }
+
+  .bg-faded-pearl {
+    background: hsl(60, 100%, 97.95%)
   }
 
   .border-primary {

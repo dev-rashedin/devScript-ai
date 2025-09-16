@@ -11,6 +11,13 @@ import {
   FiUserCheck,
 } from './icons';
 
+import helloFresh from '../assets/hello-fresh.svg';
+import honey from '../assets/honey.svg';
+import zendesk from '../assets/zendesk.svg';
+import vimeo from '../assets/vimeo.svg';
+import gartner from '../assets/gartner.svg';
+import masterclass from '../assets/masterclass.svg';
+
 export const services = [
   {
     title: 'Code Explainer',
@@ -102,3 +109,32 @@ export const links = [
   { title: 'Login', path: '/login' },
 ];
 
+
+export const sponsorLogos : SponsorLogo[] = [
+  {
+    id: 1,
+    name: 'Hello Fresh',
+    href: helloFresh,
+  },
+  {
+    id: 2,
+    name: 'Honey',
+    href: honey,
+  },
+  {    id: 3,
+    name: 'Zendesk',
+    href: zendesk,
+  },
+  {    id: 4,
+    name: 'Vimeo',
+    href: vimeo,
+  },
+  {    id: 5,
+    name: 'Gartner',
+    href: gartner,
+  },
+  {    id: 6, 
+    name: 'Masterclass',
+    href: masterclass,
+  },
+]
