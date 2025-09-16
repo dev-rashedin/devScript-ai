@@ -3,9 +3,9 @@ import { useState } from 'react';
 import { explain } from '../../actions';
 import Error from '../Error';
 import CodeExplanation from '../CodeExplanation';
-import LoadingDots from '../ui/loading-dots';
-import LanguageSelect from '../ui/language-select';
-import Button from '../ui/button';
+import LoadingDots from '../ui/LoadingDots';
+import LanguageSelect from '../ui/LanguageSelect';
+import Button from '../ui/Button';
 
 const CodeExplainForm = () => {
   const [formState, formAction, isPending] = useActionState(explain, null);

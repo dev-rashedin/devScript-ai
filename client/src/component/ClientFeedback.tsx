@@ -1,5 +1,5 @@
 'use client';
-import { TimelineContent } from './ui/timeline-animation';
+import { TimelineContent } from './ui/TimelineAnimation';
 import { useRef } from 'react';
 
 function ClientFeedback() {

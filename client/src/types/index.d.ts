@@ -29,3 +29,9 @@ declare interface ButtonProps {
   className?: string;
 }
 
+declare interface SponsorLogo {
+  id: number;
+  name: string;
+  href: string;
+}
+

@@ -2,8 +2,8 @@ import { useActionState } from 'react';
 import { useState } from 'react';
 import { writeArticle } from '../../actions';
 import Error from '../Error';
-import LoadingDots from '../ui/loading-dots';
-import Button from '../ui/button';
+import LoadingDots from '../ui/LoadingDots';
+import Button from '../ui/Button';
 import CodeExplanation from '../CodeExplanation';
 
 const ArticleGeneratorForm = () => {

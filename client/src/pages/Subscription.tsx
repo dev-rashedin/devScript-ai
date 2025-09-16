@@ -1,11 +1,9 @@
-import { Card, CardContent, CardHeader } from '../component/ui/card';
-import { TimelineContent } from '../component/ui/timeline-animation';
+import { Card, CardContent, CardHeader } from '../component/ui/Card';
+import { TimelineContent } from '../component/ui/TimelineAnimation';
 import NumberFlow from '@number-flow/react';
 import { Briefcase, CheckCheck, Database, Server } from 'lucide-react';
 import { motion } from 'motion/react';
 import { useRef, useState } from 'react';
-
-
 
 const plans = [
   {
@@ -155,13 +153,13 @@ export default function Subscription() {
     <div className='px-4 pt-20 min-h-screen mx-auto relative' ref={pricingRef}>
       <div
         className='absolute top-0 left-[10%] right-[10%] w-[80%] h-full z-0'
-      //   style={{
-      //     backgroundImage: `
-      //   radial-gradient(circle at center, #206ce8 0%, transparent 70%)
-      // `,
-      //     opacity: 0.6,
-      //     mixBlendMode: 'multiply',
-      //   }}
+        //   style={{
+        //     backgroundImage: `
+        //   radial-gradient(circle at center, #206ce8 0%, transparent 70%)
+        // `,
+        //     opacity: 0.6,
+        //     mixBlendMode: 'multiply',
+        //   }}
       />
 
       <div className='text-center mb-6 max-w-3xl mx-auto'>
@@ -295,7 +293,6 @@ export default function Subscription() {
     </div>
   );
 }
-
 
 // const Subscription = () => {
 //   return <div>Subscription</div>;
