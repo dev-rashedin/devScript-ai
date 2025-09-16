@@ -1,10 +1,15 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router';
 import { links } from '../../data';
-import {IoCloseCircleOutline, IoIosArrowDown, IoIosArrowUp, RiMenu3Fill} from '../../data/icons';
-import ContactDropdown from './contact-dropdown';
-import AnimatedBorder from './animated-border';
-import ThemeSwitcher from './theme-switcher';
+import {
+  IoCloseCircleOutline,
+  IoIosArrowDown,
+  IoIosArrowUp,
+  RiMenu3Fill,
+} from '../../data/icons';
+import ContactDropdown from './ContactDropdown';
+import AnimatedBorder from './AnimatedBorder';
+import ThemeSwitcher from './ThemeSwitcher';
 
 const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);

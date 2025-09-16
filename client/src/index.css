@@ -179,4 +179,12 @@ html {
   .primary-gradient {
    @apply bg-gradient-to-tr from-blue-600 via-blue-500 to-blue-400
   }
+
+  h1 {
+    @apply text-5xl md:text-6xl lg:text-7xl font-bold leading-tight
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl font-semibold leading-snug
+  }
 }

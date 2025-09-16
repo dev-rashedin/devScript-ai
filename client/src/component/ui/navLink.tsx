@@ -1,12 +1,9 @@
 import { useState } from 'react';
-import { NavLink } from 'react-router';// your links array
+import { NavLink } from 'react-router'; // your links array
 import { links } from '../../data';
-import {
-  IoIosArrowDown,
-  IoIosArrowUp,
-} from '../../data/icons';
-import AnimatedBorder from './animated-border';
-import ContactDropdown from './contact-dropdown';
+import { IoIosArrowDown, IoIosArrowUp } from '../../data/icons';
+import AnimatedBorder from './AnimatedBorder';
+import ContactDropdown from './ContactDropdown';
 
 const NavLinks = () => {
   const [open, setOpen] = useState(false);
@@ -27,12 +24,8 @@ const NavLinks = () => {
               <button className='cursor-pointer transition -mr-1 flex-center'>
                 {link.title}
                 <span className='ml-2'>
-                                   {open ? (
-                                     <IoIosArrowUp />
-                                   ) : (
-                                     <IoIosArrowDown />
-                                   )}
-                                 </span>
+                  {open ? <IoIosArrowUp /> : <IoIosArrowDown />}
+                </span>
               </button>
 
               {open && (
@@ -49,7 +42,7 @@ const NavLinks = () => {
                     >
                       <span className='relative group'>
                         {sub.title}
-                       <AnimatedBorder/>
+                        <AnimatedBorder />
                       </span>
                     </NavLink>
                   ))}
@@ -68,12 +61,12 @@ const NavLinks = () => {
                 }
               >
                 {link.title}
-              <AnimatedBorder/>
+                <AnimatedBorder />
               </NavLink>
             </li>
           )
         )}
-       <ContactDropdown/>
+        <ContactDropdown />
       </ul>
     </div>
   );
