@@ -8,7 +8,7 @@ const App = () => {
     <main className=' relative'>
       <Blob />
       <Navbar />
-      <section className=' min-h-[calc(100vh-320px)] lg:min-h-[calc(100vh-276px)] overflow-x-hidden'>
+      <section className=' min-h-[calc(100vh-320px)] lg:min-h-[calc(100vh-276px)]'>
         <Outlet />
       </section>
 

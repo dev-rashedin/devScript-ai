@@ -2,17 +2,20 @@
 
 import { sponsorLogos } from '../data';
 import Button from './ui/Button';
+import FloatingIcons from './ui/FloatingIcons';
 import HighlightedText from './ui/HighlightedText';
 import Marquee from 'react-fast-marquee';
+
 
 const repeatedLogos = Array.from({ length: 3 }, () => sponsorLogos).flat();
 
 const Hero = () => {
   return (
-    <main className='min-h-screen flex-col-center relative overflow-y-hidden'>
-      <section className='text-center max-w-3xl flex-col-center mx-auto px-1 py-16 space-y-2 relative'>
+    <main className='h-[91.3vh] flex flex-col items-center justify-center space-y-28 '>
+      <section className='mt-20 text-center max-w-3xl  mx-auto px-1 relative'>
+        {/* hero text and buttons */}
         <div>
-          <p className='text-blue-700'>Your Ultimate Productivity tool</p>
+          {/* <p className='text-blue-700'>Your Ultimate Productivity tool</p> */}
           <h1 className=''>AI Assistant for</h1>
           <HighlightedText label='Developers & Writers' />
 
@@ -33,11 +36,13 @@ const Hero = () => {
             offer more details or help you with workarounds.
           </p>
         </div>
+
+        {/*  floating icons */}     
+     <FloatingIcons/>
       </section>
 
       {/* bottom marquee */}
-      <section className='w-[100%]  mt-12 bg-faded-pearl py-8'>
-        <div>
+      <section className='w-[100%]  bg-faded-pearl'>
           <Marquee direction='left' speed={80} gradient={false}>
             {repeatedLogos.map((logo) => (
               <img
@@ -48,7 +53,6 @@ const Hero = () => {
               />
             ))}
           </Marquee>
-        </div>
       </section>
     </main>
   );
