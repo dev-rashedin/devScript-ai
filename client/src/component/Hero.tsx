@@ -5,11 +5,9 @@ import Button from './ui/Button';
 import HighlightedText from './ui/HighlightedText';
 import Marquee from 'react-fast-marquee';
 
-
-
 const Hero = () => {
   return (
-    <main className='min-h-[90vh] flex-col-center relative'>
+    <main className='min-h-screen  flex-col-center relative'>
       <section className='text-center max-w-3xl flex-col-center mx-auto px-1 py-16 space-y-2 relative'>
         <p className='text-blue-700'>Your Ultimate Productivity tool</p>
         <h1 className=''>AI Assistant for</h1>
@@ -34,7 +32,7 @@ const Hero = () => {
       </section>
 
       {/* bottom marquee */}
-      <section className='w-screen mt-12 bg-faded-pearl py-8'>
+      <section className='w-screen  mt-12 bg-faded-pearl py-8'>
         <div className='boundary'>
           <Marquee direction='left' speed={80} gradient={false}>
             {sponsorLogos.map((logo) => (

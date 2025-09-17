@@ -11,7 +11,7 @@ html {
     background-color: hsl(60, 100%, 97.95%);
     color: hsl(0, 0%, 0%);
 
-    h1 {
+    h1{
       @apply text-5xl md:text-6xl lg:text-7xl font-bold leading-tight;
     }
 
@@ -198,6 +198,6 @@ html {
   }
 
   .blob-gradient {
-    @apply from-blue-100 via-blue-300 to-blue-500;
+    @apply from-blue-100 via-blue-200 to-blue-300;
   }
 }

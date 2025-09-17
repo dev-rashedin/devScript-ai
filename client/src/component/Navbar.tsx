@@ -2,11 +2,13 @@ import { Link } from 'react-router';
 import NavLinks from './ui/navLink';
 import MobileMenu from './ui/MobileMenu';
 import ThemeSwitcher from './ui/ThemeSwitcher';
+import Blob from './ui/Blob';
 
 const Navbar = () => {
   return (
-    <main className='bg-navbar h-20 flex items-center sticky top-0 shadow z-20'>
+    <main className='bg-navbar sticky top-0 w-full h-20 flex-center bg-navbar/10 z-50 '>
       <nav className='flex-between boundary'>
+        <Blob/>
         <Link
           to='/'
           className='flex gap-2 items-center cursor-pointer font-logo text-brand w-60'
