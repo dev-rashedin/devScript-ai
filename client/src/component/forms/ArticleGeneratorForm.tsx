@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { writeArticle } from '../../actions';
 import Error from '../Error';
 import LoadingDots from '../ui/LoadingDots';
-import Button from '../ui/Button';
+import Button from '../ui/button';
 import CodeExplanation from '../CodeExplanation';
 
 const ArticleGeneratorForm = () => {

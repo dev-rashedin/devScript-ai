@@ -6,7 +6,6 @@ import HighlightedText from './ui/HighlightedText';
 import Marquee from 'react-fast-marquee';
 import banner from '../assets/banner.png';
 
-
 const repeatedLogos = Array.from({ length: 3 }, () => sponsorLogos).flat();
 
 const Hero = () => {
