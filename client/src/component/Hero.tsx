@@ -1,7 +1,7 @@
 'use client';
 
 import { sponsorLogos } from '../data';
-import Button from './ui/Button';
+import Button from './ui/CustomButton';
 import HighlightedText from './ui/HighlightedText';
 import Marquee from 'react-fast-marquee';
 import banner from '../assets/banner.png';

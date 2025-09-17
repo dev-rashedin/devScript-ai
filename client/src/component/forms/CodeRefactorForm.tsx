@@ -5,7 +5,7 @@ import Error from '../Error';
 import CodeExplanation from '../CodeExplanation';
 import LoadingDots from '../ui/LoadingDots';
 import LanguageSelect from '../ui/LanguageSelect';
-import Button from '../ui/button';
+import Button from '../ui/CustomButton';
 
 const CodeRefactorForm = () => {
   const [formState, formAction, isPending] = useActionState(refactor, null);

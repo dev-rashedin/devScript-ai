@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import Button from '../component/ui/Button';
+import Button from '../component/ui/CustomButton';
 import Lottie from 'lottie-react';
 import { useEffect, useState } from 'react';
 

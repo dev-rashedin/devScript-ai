@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader } from '../component/ui/Card';
+import { Card, CardContent, CardHeader } from '../component/ui/SubscriptionCard';
 import { TimelineContent } from '../component/ui/TimelineAnimation';
 import NumberFlow from '@number-flow/react';
 import { motion } from 'motion/react';
