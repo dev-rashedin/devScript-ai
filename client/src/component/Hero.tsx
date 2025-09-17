@@ -11,14 +11,21 @@ const repeatedLogos = Array.from({ length: 3 }, () => sponsorLogos).flat();
 
 const Hero = () => {
   return (
-    <main className='h-[91.3vh] overflow-y-hidden boundary flex flex-col items-center justify-center'>
-      <section className='flex flex-col-reverse items-center justify-center xl:px-12 xl:flex-row xl:items-center xl:justify-center overflow-hidden'>
+    <main className='h-[91.3vh] overflow-y-hidden boundary flex flex-col items-center justify-between xl:justify-center'>
+      <section className='flex flex-col-reverse items-center justify-center w-full xl:px-6  xl:flex-row xl:items-center xl:justify-between '>
         {/* hero text and buttons */}
         <div className='max-w-3xl flex flex-col justify-center items-center text-center  xl:items-start xl:text-left '>
+          {/* tagline for large screen */}
+          <p className='hidden xl:block bg-amber-100 text-amber-600 font-semibold  px-4 py-1 rounded-full mb-2'>
+            Your ultimate productivity tool
+          </p>
           <h1>AI Assistant for</h1>
-          <HighlightedText label='Developers & Writers' />
+          <h1 className='md:hidden'>Developers & Writers</h1>
+          <div className='hidden md:block'>
+            <HighlightedText label='Developers & Writers' />
+          </div>
 
-          <p className='md:text-lg lg:text-xl text-muted mt-6 xl:mt-9'>
+          <p className='max-w-xl xl:max-w-2xl md:text-lg xl:text-xl text-muted mt-6 xl:mt-8'>
             Explain code, refactor smarter, summarize documents, write articles,
             craft emails, and polish your resume — all in one place.
           </p>
@@ -28,7 +35,7 @@ const Hero = () => {
             <Button label='View Services' type='secondary' href='#services' />
           </div>
 
-          <p className='max-w-2xl text-muted text-xs mt-4 text-center xl:mt-8 xl:text-left'>
+          <p className='hidden  max-w-2xl text-muted text-xs mt-4 text-center xl:mt-6 xl:text-left'>
             <span className='font-bold'>Note:</span> Some features described
             here might be planned in our roadmap but not yet released. You can
             open a live chat from within your account and our Support team can
@@ -36,7 +43,7 @@ const Hero = () => {
           </p>
         </div>
         {/* hero image */}
-        <div className='hidden md:block w-[400px] h-auto lg:w-[400px] xl:w-[900px]'>
+        <div className='w-[300px] md:w-[400px] h-auto lg:w-[400px] xl:w-[550px] mt-8 lg:mt-0'>
           <img src={banner} alt='coding' className='w-[1000px] h-full' />
         </div>
         {/*  floating icons */}
@@ -44,7 +51,7 @@ const Hero = () => {
       </section>
 
       {/* bottom marquee */}
-      <section className='w-[100%] mt-12 lg:mt-16  bg-faded-pearl'>
+      <section className='w-[100%] mb-6 xl:mb-0 xl:mt-16  bg-faded-pearl'>
         <Marquee direction='left' speed={80} gradient={false}>
           {repeatedLogos.map((logo) => (
             <img
