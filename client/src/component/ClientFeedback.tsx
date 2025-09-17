@@ -25,7 +25,7 @@ function ClientFeedback() {
   return (
     <>
       <section
-        className='relative  h-full container mx-auto  rounded-lg  py-14 bg-white'
+        className='relative  h-full container mx-auto  rounded-lg  py-14 overflow-hidden'
         ref={testimonialRef}
       >
         <article className={'max-w-screen-md mx-auto text-center space-y-2 '}>

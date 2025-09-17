@@ -6,7 +6,7 @@ import Blob from './ui/Blob';
 
 const Navbar = () => {
   return (
-    <main className='bg-navbar sticky top-0 w-full h-20 flex-center bg-navbar/10 z-50 '>
+    <main className='bg-navbar sticky top-0 w-full h-20 flex-center bg-navbar/10 z-50'>
       <nav className='flex-between boundary'>
         <Blob/>
         <Link

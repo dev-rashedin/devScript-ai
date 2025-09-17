@@ -1,20 +1,17 @@
 'use client';
 
 import { sponsorLogos } from '../data';
-import Services from './Services';
 import Button from './ui/Button';
 import HighlightedText from './ui/HighlightedText';
 import Marquee from 'react-fast-marquee';
-import ServiceCard from './ui/ServiceCard';
 
 const repeatedLogos = Array.from({ length: 3 }, () => sponsorLogos).flat();
 
 const Hero = () => {
-
   return (
-    <main className='min-h-screen boundary border flex-col-center relative'>
-      <section className='flex flex-col items-between justify-between xl:flex-row xl:justify-between'>
-        <div className='text-center max-w-3xl flex-col-center mx-auto px-1 py-16 space-y-2 xl:1/2'>
+    <main className='min-h-screen flex-col-center relative overflow-y-hidden'>
+      <section className='text-center max-w-3xl flex-col-center mx-auto px-1 py-16 space-y-2 relative'>
+        <div>
           <p className='text-blue-700'>Your Ultimate Productivity tool</p>
           <h1 className=''>AI Assistant for</h1>
           <HighlightedText label='Developers & Writers' />
@@ -36,11 +33,10 @@ const Hero = () => {
             offer more details or help you with workarounds.
           </p>
         </div>
-        <ServiceCard/>
       </section>
 
       {/* bottom marquee */}
-      <section className='w-screen  mt-12 bg-faded-pearl py-8'>
+      <section className='w-[100%]  mt-12 bg-faded-pearl py-8'>
         <div>
           <Marquee direction='left' speed={80} gradient={false}>
             {repeatedLogos.map((logo) => (
