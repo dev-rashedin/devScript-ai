@@ -1,6 +1,7 @@
 'use client';
 import { TimelineContent } from './ui/TimelineAnimation';
 import { useRef } from 'react';
+import { Alex, Rika, Reacher, Alicia, Steven, Angelina, Guillermo } from '../data/assets';
 
 function ClientFeedback() {
   const testimonialRef = useRef<HTMLDivElement>(null);
@@ -24,17 +25,17 @@ function ClientFeedback() {
 
   return (
     <section
-      className='relative h-full container mx-auto rounded-lg py-14 overflow-hidden'
+      className='relative h-full container mx-auto rounded-lg py-16 overflow-hidden'
       ref={testimonialRef}
     >
-      <article className='max-w-screen-md mx-auto text-center space-y-2'>
+      <article className='max-w-screen- mx-auto text-center space-y-2'>
         <TimelineContent
           as='h2'
           animationNum={0}
           customVariants={revealVariants}
           timelineRef={testimonialRef}
         >
-          Trusted by Developers and Content Creators Worldwide
+          Trusted by Thousands
         </TimelineContent>
         <TimelineContent
           as='p'
@@ -43,7 +44,8 @@ function ClientFeedback() {
           customVariants={revealVariants}
           timelineRef={testimonialRef}
         >
-          Here's what our users think about DevScribe-AI
+          Here's what our users — developers, writers, and content creators —
+          think about DevScribe-AI
         </TimelineContent>
       </article>
 
@@ -58,10 +60,10 @@ function ClientFeedback() {
             <div className='absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:50px_56px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]'></div>
             <figure>
               <img
-                src='/logos/Logo-1.svg'
+                src={'/logo.png'}
                 alt='DevScribe-AI'
-                width={200}
-                height={200}
+                width={100}
+                height={100}
               />
             </figure>
             <article className='mt-auto'>
@@ -77,7 +79,7 @@ function ClientFeedback() {
                   <p>Lead Developer at CodeWave</p>
                 </div>
                 <img
-                  src='/people/am1.jpg'
+                  src={Alex}
                   alt='Alex Morgan'
                   width={200}
                   height={200}
@@ -104,7 +106,7 @@ function ClientFeedback() {
                   <p>Content Lead at WriteLab</p>
                 </div>
                 <img
-                  src='/people/am3.jpg'
+                  src={Rika}
                   alt='Rika Shinoda'
                   width={200}
                   height={200}
@@ -130,11 +132,13 @@ function ClientFeedback() {
               </p>
               <div className='flex justify-between items-end pt-5'>
                 <div>
-                  <h2 className='font-semibold lg:text-xl text-lg'>Reacher</h2>
+                  <h2 className='font-semibold lg:text-xl text-lg'>
+                    Jack Reacher
+                  </h2>
                   <p className='lg:text-base text-sm'>CTO of ByteCraft</p>
                 </div>
                 <img
-                  src='/people/aam4.jpg'
+                  src={Reacher}
                   alt='Reacher'
                   width={200}
                   height={200}
@@ -157,14 +161,16 @@ function ClientFeedback() {
               </p>
               <div className='flex justify-between items-end pt-5'>
                 <div>
-                  <h2 className='font-semibold lg:text-xl text-lg'>John</h2>
+                  <h2 className='font-semibold lg:text-xl text-lg'>
+                    Alicia Spinet
+                  </h2>
                   <p className='lg:text-base text-sm'>
                     Head of Content at WriteFlow
                   </p>
                 </div>
                 <img
-                  src='/people/am2.jpg'
-                  alt='John'
+                  src={Alicia}
+                  alt='Alicia'
                   width={200}
                   height={200}
                   className='lg:w-16 lg:h-16 w-12 h-12 rounded-xl object-cover'
@@ -192,7 +198,7 @@ function ClientFeedback() {
                   <p className='lg:text-base text-sm'>CEO of MailCraft</p>
                 </div>
                 <img
-                  src='/people/aam3.jpg'
+                  src={Steven}
                   alt='Steven Sunny'
                   width={200}
                   height={200}
@@ -221,7 +227,7 @@ function ClientFeedback() {
                   <p>CTO of DevLabs</p>
                 </div>
                 <img
-                  src='/people/aam1.png'
+                  src={Guillermo}
                   alt='Guillermo Rauch'
                   width={200}
                   height={200}
@@ -240,10 +246,10 @@ function ClientFeedback() {
             <div className='absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:50px_56px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]'></div>
             <figure>
               <img
-                src={'/logos/Logo-5.svg'}
+                src={'/logo.png'}
                 alt='DevScribe-AI'
-                width={200}
-                height={200}
+                width={100}
+                height={100}
               />
             </figure>
             <article className='mt-auto'>
@@ -254,12 +260,12 @@ function ClientFeedback() {
               </p>
               <div className='flex justify-between pt-5'>
                 <div>
-                  <h2 className='font-semibold text-xl'>Paul Brauch</h2>
+                  <h2 className='font-semibold text-xl'>Angelina Johnson</h2>
                   <p>Lead Engineer at CodeSphere</p>
                 </div>
                 <img
-                  src='/people/in1.jpg'
-                  alt='Paul Brauch'
+                  src={Angelina}
+                  alt='Angelina'
                   width={200}
                   height={200}
                   className='w-16 h-16 rounded-xl object-cover'
