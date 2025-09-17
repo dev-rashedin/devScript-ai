@@ -19,6 +19,7 @@ html {
       @apply text-3xl md:text-4xl lg:text-5xl font-semibold leading-snug;
     }
 
+    /* light mode */
     .text-primary {
       color: hsl(0, 0%, 0%);
     }
@@ -63,8 +64,12 @@ html {
       background-color: hsl(0, 0%, 98%);
       @apply w-full max-w-5xl mx-auto p-12 rounded-2xl shadow;
     }
+      .blob-gradient {
+    @apply bg-gradient-to-t from-blue-100 via-blue-300 to-blue-500;
+  }
   }
 
+  /* Dark mode */
   .dark {
     body {
       background-color: hsl(0, 0%, 15%);
@@ -112,8 +117,14 @@ html {
         background-color: hsl(0, 0%, 19%);
       }
     }
+
+     .blob-gradient {
+    @apply bg-gradient-to-b from-blue-500 via-blue-600 to-blue-700
+  }
   }
 
+ 
+/* prose */
   .prose p {
     margin-bottom: 1.05em;
   }
@@ -197,7 +208,5 @@ html {
     @apply bg-gradient-to-tr from-blue-600 via-blue-500 to-blue-400;
   }
 
-  .blob-gradient {
-    @apply from-blue-100 via-blue-200 to-blue-300;
-  }
+
 }

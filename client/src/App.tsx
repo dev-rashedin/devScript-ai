@@ -8,7 +8,7 @@ const App = () => {
     <main className=' relative'>
       <Blob />
       <Navbar />
-      <section className='boundary min-h-[calc(100vh-320px)] lg:min-h-[calc(100vh-276px)]'>
+      <section className=' min-h-[calc(100vh-320px)] lg:min-h-[calc(100vh-276px)] overflow-x-hidden'>
         <Outlet />
       </section>
 

@@ -1,46 +1,54 @@
 'use client';
 
 import { sponsorLogos } from '../data';
+import Services from './Services';
 import Button from './ui/Button';
 import HighlightedText from './ui/HighlightedText';
 import Marquee from 'react-fast-marquee';
+import ServiceCard from './ui/ServiceCard';
+
+const repeatedLogos = Array.from({ length: 3 }, () => sponsorLogos).flat();
 
 const Hero = () => {
+
   return (
-    <main className='min-h-screen  flex-col-center relative'>
-      <section className='text-center max-w-3xl flex-col-center mx-auto px-1 py-16 space-y-2 relative'>
-        <p className='text-blue-700'>Your Ultimate Productivity tool</p>
-        <h1 className=''>AI Assistant for</h1>
-        <HighlightedText label='Developers & Writers' />
+    <main className='min-h-screen boundary border flex-col-center relative'>
+      <section className='flex flex-col items-between justify-between xl:flex-row xl:justify-between'>
+        <div className='text-center max-w-3xl flex-col-center mx-auto px-1 py-16 space-y-2 xl:1/2'>
+          <p className='text-blue-700'>Your Ultimate Productivity tool</p>
+          <h1 className=''>AI Assistant for</h1>
+          <HighlightedText label='Developers & Writers' />
 
-        <p className='md:text-lg lg:text-xl text-muted mt-4 lg:mt-8'>
-          Explain code, refactor smarter, summarize documents, write articles,
-          craft emails, and polish your resume — all in one place.
-        </p>
+          <p className='md:text-lg lg:text-xl text-muted mt-4 lg:mt-8'>
+            Explain code, refactor smarter, summarize documents, write articles,
+            craft emails, and polish your resume — all in one place.
+          </p>
 
-        <div className='flex-center gap-4 mt-2 lg:mt-8'>
-          <Button label='Get Started' type='primary' />
-          <Button label='View Services' type='secondary' href='#services' />
+          <div className='flex-center gap-4 mt-2 lg:mt-8'>
+            <Button label='Get Started' type='primary' />
+            <Button label='View Services' type='secondary' href='#services' />
+          </div>
+
+          <p className='text-muted text-[14px] mt-4 text-center'>
+            <span className='font-bold'>Note:</span> Some features described
+            here might be planned in our roadmap but not yet released. You can
+            open a live chat from within your account and our Support team can
+            offer more details or help you with workarounds.
+          </p>
         </div>
-
-        <p className='text-muted text-[14px] mt-4 text-center'>
-          <span className='font-bold'>Note:</span> Some features described here
-          might be planned in our roadmap but not yet released. You can open a
-          live chat from within your account and our Support team can offer more
-          details or help you with workarounds.
-        </p>
+        <ServiceCard/>
       </section>
 
       {/* bottom marquee */}
       <section className='w-screen  mt-12 bg-faded-pearl py-8'>
-        <div className='boundary'>
+        <div>
           <Marquee direction='left' speed={80} gradient={false}>
-            {sponsorLogos.map((logo) => (
+            {repeatedLogos.map((logo) => (
               <img
-                key={logo.id}
+                key={`${logo.id}-${Math.random()}`}
                 src={logo.href}
                 alt={logo.name}
-                className='h-12 mr-20'
+                className='h-9 mr-20'
               />
             ))}
           </Marquee>
