@@ -12,7 +12,7 @@ html {
     color: hsl(0, 0%, 0%);
 
     h1{
-      @apply text-5xl md:text-6xl lg:text-7xl font-bold leading-tight;
+      @apply text-5xl md:text-6xl xl:text-7xl font-bold leading-tight;
     }
 
     h2 {
