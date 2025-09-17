@@ -1,9 +1,14 @@
 import { Card, CardContent, CardHeader } from '../component/ui/Card';
 import { TimelineContent } from '../component/ui/TimelineAnimation';
 import NumberFlow from '@number-flow/react';
-import { Briefcase, CheckCheck, Database, Server } from 'lucide-react';
 import { motion } from 'motion/react';
 import { useRef, useState } from 'react';
+import {
+  FiBriefcase,
+  LuCheckCheck,
+  LuDatabase,
+  LuServer,
+} from '../data/icons';
 
 const plans = [
   {
@@ -15,9 +20,12 @@ const plans = [
     buttonText: 'Get started',
     buttonVariant: 'outline' as const,
     features: [
-      { text: 'Up to 10 boards per workspace', icon: <Briefcase size={20} /> },
-      { text: 'Up to 10GB storage', icon: <Database size={20} /> },
-      { text: 'Limited analytics', icon: <Server size={20} /> },
+      {
+        text: 'Up to 10 boards per workspace',
+        icon: <FiBriefcase size={20} />,
+      },
+      { text: 'Up to 10GB storage', icon: <LuDatabase size={20} /> },
+      { text: 'Limited analytics', icon: <LuServer size={20} /> },
     ],
     includes: [
       'Free includes:',
@@ -36,9 +44,9 @@ const plans = [
     buttonVariant: 'default' as const,
     popular: true,
     features: [
-      { text: 'Unlimted boards', icon: <Briefcase size={20} /> },
-      { text: 'Storage (250MB/file)', icon: <Database size={20} /> },
-      { text: '100 workspace command runs', icon: <Server size={20} /> },
+      { text: 'Unlimted boards', icon: <FiBriefcase size={20} /> },
+      { text: 'Storage (250MB/file)', icon: <LuDatabase size={20} /> },
+      { text: '100 workspace command runs', icon: <LuServer size={20} /> },
     ],
     includes: [
       'Everything in Starter, plus:',
@@ -56,9 +64,9 @@ const plans = [
     buttonText: 'Get started',
     buttonVariant: 'outline' as const,
     features: [
-      { text: 'Unlimited board', icon: <Briefcase size={20} /> },
-      { text: 'Unlimited storage ', icon: <Database size={20} /> },
-      { text: 'Unlimited workspaces', icon: <Server size={20} /> },
+      { text: 'Unlimited board', icon: <FiBriefcase size={20} /> },
+      { text: 'Unlimited storage ', icon: <LuDatabase size={20} /> },
+      { text: 'Unlimited workspaces', icon: <LuServer size={20} /> },
     ],
     includes: [
       'Everything in Business, plus:',
@@ -278,7 +286,7 @@ export default function Subscription() {
                     {plan.includes.slice(1).map((feature, featureIndex) => (
                       <li key={featureIndex} className='flex items-center'>
                         <span className='h-6 w-6 bg-green-50 border border-blue-500 rounded-full grid place-content-center mt-0.5 mr-3'>
-                          <CheckCheck className='h-4 w-4 text-blue-500 ' />
+                          <LuCheckCheck className='h-4 w-4 text-blue-500 ' />
                         </span>
                         <span className='text-sm text-gray-600'>{feature}</span>
                       </li>

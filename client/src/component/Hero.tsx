@@ -43,7 +43,7 @@ const Hero = () => {
           </p>
         </div>
         {/* hero image */}
-        <div className='w-[300px] md:w-[400px] h-auto lg:w-[400px] xl:w-[600px] mt-8 lg:mt-0'>
+        <div className='w-[300px] md:w-[400px] h-auto lg:w-[400px] xl:w-[550px] mt-8 lg:mt-0'>
           <img src={banner} alt='coding' className='w-[1000px] h-full' />
         </div>
         {/*  floating icons */}
