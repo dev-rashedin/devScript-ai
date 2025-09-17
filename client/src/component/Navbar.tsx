@@ -21,7 +21,7 @@ const Navbar = () => {
         <NavLinks />
 
         {/* theme switcher */}
-        <div className='hidden lg:block mt-[6px]'>
+        <div className='hidden lg:block mt-[6px] border rounded-full h-8 w-8 flex-center hover:bg-hover transition'>
           <ThemeSwitcher />
         </div>
 
