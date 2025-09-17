@@ -4,7 +4,7 @@ import { sponsorLogos } from '../data';
 import Button from './ui/CustomButton';
 import HighlightedText from './ui/HighlightedText';
 import Marquee from 'react-fast-marquee';
-import banner from '../assets/banner.png';
+import {banner} from '../data/assets';
 
 const repeatedLogos = Array.from({ length: 3 }, () => sponsorLogos).flat();
 
@@ -31,7 +31,7 @@ const Hero = () => {
 
           <div className='flex-center gap-4 mt-8 xl:mt-12'>
             <Button label='Get Started' type='primary' />
-            <Button label='View Services' type='secondary' href='#services' />
+            <Button label='Explore Services' type='secondary' href='#services' />
           </div>
 
           <p className='hidden  max-w-2xl text-muted text-xs mt-4 text-center xl:mt-6 xl:text-left'>
@@ -42,8 +42,8 @@ const Hero = () => {
           </p>
         </div>
         {/* hero image */}
-        <div className='w-[300px] md:w-[400px] h-auto lg:w-[400px] xl:w-[550px] mt-8 lg:mt-0'>
-          <img src={banner} alt='coding' className='w-[1000px] h-full' />
+        <div className='w-[300px] md:w-[400px] h-auto lg:w-[400px] xl:w-[530px] mt-8 lg:mt-0 '>
+          <img src={banner} alt='coding' className='w-[1000px] h-full -z-50' />
         </div>
         {/*  floating icons */}
         {/* <FloatingIcons/> */}

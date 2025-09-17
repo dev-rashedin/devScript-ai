@@ -10,13 +10,15 @@ import {
   FiMail,
   FiUserCheck,
 } from './icons';
+import {
+  helloFresh,
+  honey,
+  zendesk,
+  vimeo,
+  gartner,
+  masterclass
+} from './assets';
 
-import helloFresh from '../assets/hello-fresh.svg';
-import honey from '../assets/honey.svg';
-import zendesk from '../assets/zendesk.svg';
-import vimeo from '../assets/vimeo.svg';
-import gartner from '../assets/gartner.svg';
-import masterclass from '../assets/masterclass.svg';
 
 export const services = [
   {

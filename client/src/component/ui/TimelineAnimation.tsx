@@ -19,7 +19,7 @@ export const TimelineContent = <T extends keyof HTMLElementTagNameMap = "div">({
   className,
   as,
   customVariants,
-  once=false,
+  once=true,
   ...props
 }: TimelineContentProps<T>) => {
   const defaultSequenceVariants = {
