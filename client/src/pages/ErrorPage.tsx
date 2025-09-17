@@ -4,7 +4,7 @@ import Lottie from 'lottie-react';
 import { useEffect, useState } from 'react';
 
 const ErrorPage = () => {
-    const [animationData, setAnimationData] = useState<any>(null);
+    const [animationData, setAnimationData] = useState<unknown>(null);
 
     useEffect(() => {
       import('../assets/Animation.json').then((data) => {
