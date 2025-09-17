@@ -1,7 +1,6 @@
 'use client';
 
 import { sponsorLogos } from '../data';
-import Blob from './ui/Blob';
 import Button from './ui/Button';
 import HighlightedText from './ui/HighlightedText';
 import Marquee from 'react-fast-marquee';
@@ -12,6 +11,7 @@ const Hero = () => {
   return (
     <main className='min-h-[90vh] flex-col-center relative'>
       <section className='text-center max-w-3xl flex-col-center mx-auto px-1 py-16 space-y-2 relative'>
+        <p className='text-blue-700'>Your Ultimate Productivity tool</p>
         <h1 className=''>AI Assistant for</h1>
         <HighlightedText label='Developers & Writers' />
 

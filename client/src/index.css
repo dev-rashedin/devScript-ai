@@ -11,9 +11,17 @@ html {
     background-color: hsl(60, 100%, 97.95%);
     color: hsl(0, 0%, 0%);
 
+    h1 {
+      @apply text-5xl md:text-6xl lg:text-7xl font-bold leading-tight;
+    }
+
+    h2 {
+      @apply text-3xl md:text-4xl lg:text-5xl font-semibold leading-snug;
+    }
+
     .text-primary {
       color: hsl(0, 0%, 0%);
-    };
+    }
 
     .text-secondary {
       color: hsl(0, 100%, 100%);
@@ -23,9 +31,9 @@ html {
       color: hsl(0, 0%, 25%);
     }
 
-     .text-brand {
-    color: hsl(221, 81%, 49%);
-  }
+    .text-brand {
+      color: hsl(221, 81%, 49%);
+    }
 
     a {
       @apply text-blue-600;
@@ -40,11 +48,11 @@ html {
     }
 
     .bg-secondary {
-    background-color : hsl(60, 0%, 90%);
+      background-color: hsl(60, 0%, 90%);
     }
 
     .bg-footer {
-        background-color: hsl(60, 76%, 96%);
+      background-color: hsl(60, 76%, 96%);
     }
 
     .bg-card {
@@ -53,7 +61,7 @@ html {
 
     .form-ui {
       background-color: hsl(0, 0%, 98%);
-      @apply w-full max-w-5xl mx-auto p-12 rounded-2xl shadow ;
+      @apply w-full max-w-5xl mx-auto p-12 rounded-2xl shadow;
     }
   }
 
@@ -77,15 +85,16 @@ html {
       color: hsl(0, 0%, 87%);
     }
 
-     .text-brand {
-    color: hsl(221, 100%, 65%);
-  }
+    .text-brand {
+      color: hsl(221, 100%, 65%);
+    }
 
     a {
       @apply text-blue-400;
     }
 
-    .bg-navbar, .bg-secondary {
+    .bg-navbar,
+    .bg-secondary {
       background-color: hsl(0, 0%, 10%);
     }
 
@@ -173,26 +182,22 @@ html {
   }
 
   .bg-faded-pearl {
-    background: hsl(60, 100%, 97.95%)
+    background: hsl(60, 100%, 97.95%);
   }
 
   .border-primary {
     border-color: hsl(215, 52%, 40%);
-  };
+  }
 
   .text-area {
-    @apply border rounded-lg w-full p-3 font-mono text-sm bg-transparent min-h-[250px] placeholder:text-gray-400 placeholder:text-base
-  };
+    @apply border rounded-lg w-full p-3 font-mono text-sm bg-transparent min-h-[250px] placeholder:text-gray-400 placeholder:text-base;
+  }
 
   .primary-gradient {
-   @apply bg-gradient-to-tr from-blue-600 via-blue-500 to-blue-400
+    @apply bg-gradient-to-tr from-blue-600 via-blue-500 to-blue-400;
   }
 
-  h1 {
-    @apply text-5xl md:text-6xl lg:text-7xl font-bold leading-tight
-  }
-
-  h2 {
-    @apply text-3xl md:text-4xl lg:text-5xl font-semibold leading-snug
+  .blob-gradient {
+    @apply from-blue-100 via-blue-300 to-blue-500;
   }
 }

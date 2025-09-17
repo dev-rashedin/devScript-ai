@@ -1,5 +1,3 @@
-
-
 const Blob = () => {
   return (
     <>
@@ -17,5 +15,5 @@ const Blob = () => {
       <div className='absolute top-0 left-0 w-screen h-[60vh] bg-gradient-to-t from-blue-100 via-blue-300 to-blue-500 rounded-full blur-3xl opacity-30 z-0'></div>
     </>
   );
-}
-export default Blob
+};
+export default Blob;

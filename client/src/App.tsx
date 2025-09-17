@@ -5,7 +5,7 @@ import Blob from './component/ui/Blob';
 
 const App = () => {
   return (
-    <main className='overflow-x-hidden relative'>
+    <main className=' relative'>
       <Blob/>
       <Navbar />
       <section className='boundary min-h-[calc(100vh-320px)] lg:min-h-[calc(100vh-276px)]'>

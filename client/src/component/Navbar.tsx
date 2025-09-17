@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import NavLinks from './ui/NavLink';
+import NavLinks from './ui/navLink';
 import MobileMenu from './ui/MobileMenu';
 import ThemeSwitcher from './ui/ThemeSwitcher';
 
