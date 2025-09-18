@@ -20,7 +20,7 @@ import {
 } from './assets';
 
 
-export const services = [
+export const services2 = [
   {
     title: 'Code Explainer',
     desc: 'Paste your code and get a clear, in-depth explanation. Perfect for learning, debugging, and quickly understanding complex logic.',
@@ -64,6 +64,46 @@ export const services = [
     cta: 'Improve Resume',
   },
 ];
+
+export const services = [
+  {
+    title: 'Code Explainer',
+    desc: 'Paste your code and get a clear, in-depth explanation. Perfect for learning, debugging, and understanding complex logic.',
+    icon: FiCode,
+    cta: 'Explain Code',
+  },
+  {
+    title: 'Doc Summarizer',
+    desc: 'Summarize documents or articles instantly. Save time, extract key points, and understand content efficiently.',
+    icon: FiFileText,
+    cta: 'Summarize Now',
+  },
+  {
+    title: 'Article Generator',
+    desc: 'Generate professional articles, blogs, or notes effortlessly. Produce structured, creative, and engaging content quickly.',
+    icon: FiPenTool,
+    cta: 'Generate Article',
+  },
+  {
+    title: 'Code Refactor',
+    desc: 'Improve and optimize your code without changing functionality. Enhance readability, reduce errors, and follow best practices.',
+    icon: FiEdit3,
+    cta: 'Refactor Code',
+  },
+  {
+    title: 'Email Helper',
+    desc: 'Draft clear, professional emails instantly. Perfect for concise, polite, and persuasive communication every time.',
+    icon: FiMail,
+    cta: 'Draft Email',
+  },
+  {
+    title: 'Resume Assistant',
+    desc: 'Polish your resume or cover letter with AI expertise. Ensure professional formatting, clear phrasing, and strong impact.',
+    icon: FiUserCheck,
+    cta: 'Improve Resume',
+  },
+];
+
 
 
 
