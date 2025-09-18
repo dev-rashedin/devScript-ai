@@ -20,7 +20,7 @@ import {
 } from './assets';
 
 
-export const services = [
+export const services2 = [
   {
     title: 'Code Explainer',
     desc: 'Paste your code and get a clear, in-depth explanation. Perfect for learning, debugging, and quickly understanding complex logic.',
@@ -64,6 +64,8 @@ export const services = [
     cta: 'Improve Resume',
   },
 ];
+
+
 
 
 
