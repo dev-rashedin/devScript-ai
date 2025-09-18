@@ -18,6 +18,7 @@ import {
   gartner,
   masterclass
 } from './assets';
+import type { SponsorLogo } from '../types';
 
 
 export const services2 = [
