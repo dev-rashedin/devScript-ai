@@ -42,8 +42,9 @@ const Hero = () => {
           </p>
         </div>
         {/* hero image */}
-        <div className='w-[300px] md:w-[400px] h-auto lg:w-[400px] xl:w-[530px] mt-8 lg:mt-0 '>
-          <img src={banner} alt='coding' className='w-[1000px] h-full -z-50' />
+        <div className='w-[300px] md:w-[400px] h-auto lg:w-[400px] xl:w-[530px] mt-8 lg:mt-0 relative'>
+          <div className='absolute top-0 left-0 w-full h-full -z-50 rounded-full bg-blue-500/10 blur-2xl'></div>
+          <img src={banner} alt='coding' className='w-[1000px] h-full -z-10' />
         </div>
         {/*  floating icons */}
         {/* <FloatingIcons/> */}
