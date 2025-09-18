@@ -28,7 +28,7 @@ function ClientFeedback() {
       className='relative h-full container mx-auto rounded-lg py-16 overflow-hidden'
       ref={testimonialRef}
     >
-      <article className='max-w-screen- mx-auto text-center space-y-2'>
+      <article className='max-w-screen- mx-auto text-center space-y-2 mb-4'>
         <TimelineContent
           as='h2'
           animationNum={0}
@@ -39,7 +39,7 @@ function ClientFeedback() {
         </TimelineContent>
         <TimelineContent
           as='p'
-          className='mx-auto text-muted'
+          className='mx-auto lg:text-lg text-muted'
           animationNum={1}
           customVariants={revealVariants}
           timelineRef={testimonialRef}
