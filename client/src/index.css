@@ -16,7 +16,7 @@ html {
     }
 
     h2 {
-      @apply text-3xl md:text-4xl lg:text-5xl font-semibold leading-snug;
+      @apply text-3xl md:text-4xl lg:text-5xl font-bold leading-snug;
     }
 
     /* light mode */
@@ -59,6 +59,10 @@ html {
     .bg-card {
       background-color: hsl(0, 0%, 100%);
     }
+    .bg-card-secondary {
+      color: hsl(0, 0%, 100%);
+      background-color: hsl(0, 0%, 0%);
+    }
 
     .form-ui {
       background-color: hsl(0, 0%, 98%);
@@ -67,6 +71,13 @@ html {
       .blob-gradient {
     @apply bg-gradient-to-t from-blue-300 via-blue-400 to-blue-500 rounded-full blur-[180px] opacity-30;
   }
+
+  .grid-line-color {
+  background: linear-gradient(to right, rgba(107,114,128,0.2) 1px, transparent 1px),
+              linear-gradient(to bottom, rgba(107,114,128,0.2) 1px, transparent 1px);
+  background-size: 50px 56px;
+  mask-image: radial-gradient(ellipse 80% 50% at 50% 0%, #000 70%, transparent 120%);
+}
   }
 
   /* Dark mode */
@@ -109,6 +120,11 @@ html {
 
     .bg-card {
       background-color: hsl(0 0% 10%);
+    }
+
+    .bg-card-secondary {
+      color: hsl(0, 0%, 0%);
+      background-color: hsl(60, 100%, 98%);
     }
 
     .form-ui {

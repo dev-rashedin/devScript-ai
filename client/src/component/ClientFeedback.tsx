@@ -25,10 +25,10 @@ function ClientFeedback() {
 
   return (
     <section
-      className='relative h-full container mx-auto rounded-lg py-16 overflow-hidden'
+      className='relative h-full boundary rounded-lg mt-16 overflow-hidden'
       ref={testimonialRef}
     >
-      <article className='max-w-screen- mx-auto text-center space-y-2'>
+      <article className='max-w-screen- mx-auto text-center space-y-2 mb-8'>
         <TimelineContent
           as='h2'
           animationNum={0}
@@ -39,7 +39,7 @@ function ClientFeedback() {
         </TimelineContent>
         <TimelineContent
           as='p'
-          className='mx-auto text-muted'
+          className='mx-auto md:text-lg text-muted'
           animationNum={1}
           customVariants={revealVariants}
           timelineRef={testimonialRef}
@@ -57,13 +57,13 @@ function ClientFeedback() {
             timelineRef={testimonialRef}
             className='lg:flex-[7] flex-[6] flex flex-col justify-between relative bg-primaryColor overflow-hidden rounded-lg border border-gray-200 p-5'
           >
-            <div className='absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:50px_56px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]'></div>
+            <div className='absolute bottom-0 left-0 right-0 top-0 grid-line-color'></div>
             <figure>
               <img
                 src={'/logo.png'}
                 alt='DevScribe-AI'
-                width={100}
-                height={100}
+                width={80}
+                height={80}
               />
             </figure>
             <article className='mt-auto'>
@@ -123,7 +123,7 @@ function ClientFeedback() {
             animationNum={2}
             customVariants={revealVariants}
             timelineRef={testimonialRef}
-            className='flex flex-col justify-between relative bg-[#111111] text-white overflow-hidden rounded-lg border border-gray-200 p-5'
+            className='flex flex-col justify-between relative bg-card-secondary overflow-hidden rounded-lg border border-gray-200 p-5'
           >
             <article className='mt-auto'>
               <p className='2xl:text-base text-sm'>
@@ -152,7 +152,7 @@ function ClientFeedback() {
             animationNum={3}
             customVariants={revealVariants}
             timelineRef={testimonialRef}
-            className='flex flex-col justify-between relative bg-[#111111] text-white overflow-hidden rounded-lg border border-gray-200 p-5'
+            className='flex flex-col justify-between relative bg-card-secondary overflow-hidden rounded-lg border border-gray-200 p-5'
           >
             <article className='mt-auto'>
               <p className='2xl:text-base text-sm'>
@@ -183,7 +183,7 @@ function ClientFeedback() {
             animationNum={4}
             customVariants={revealVariants}
             timelineRef={testimonialRef}
-            className='flex flex-col justify-between relative bg-[#111111] text-white overflow-hidden rounded-lg border border-gray-200 p-5'
+            className='flex flex-col justify-between relative bg-card-secondary overflow-hidden rounded-lg border border-gray-200 p-5'
           >
             <article className='mt-auto'>
               <p className='2xl:text-base text-sm'>
@@ -243,13 +243,13 @@ function ClientFeedback() {
             timelineRef={testimonialRef}
             className='lg:flex-[7] flex-[6] flex flex-col justify-between relative bg-primaryColor overflow-hidden rounded-lg border border-gray-200 p-5'
           >
-            <div className='absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:50px_56px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]'></div>
+            <div className='absolute bottom-0 left-0 right-0 top-0 grid-line-color'></div>
             <figure>
               <img
                 src={'/logo.png'}
                 alt='DevScribe-AI'
-                width={100}
-                height={100}
+                width={80}
+                height={80}
               />
             </figure>
             <article className='mt-auto'>
