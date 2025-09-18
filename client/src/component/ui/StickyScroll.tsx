@@ -1,8 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useMotionValueEvent, useScroll } from 'motion/react';
 import { motion } from 'motion/react';
+import Lottie from 'lottie-react';
 import { cn } from '../../lib/utils';
 import type { ServiceContent } from '../../types';
+import animationData from '../../assets/ai-animation.json'
+import { BsArrowRight } from 'react-icons/bs';
+import { CgArrowTopRight } from 'react-icons/cg';
+import { Link } from 'react-router';
 
 export const StickyScroll = ({
   content,
@@ -20,6 +25,7 @@ export const StickyScroll = ({
     offset: ['start start', 'end start'],
   });
   const cardLength = content.length;
+  //  const [animationData, setAnimationData] = useState<unknown>(null);
 
   useMotionValueEvent(scrollYProgress, 'change', (latest) => {
     const cardsBreakpoints = content.map((_, index) => index / cardLength);
@@ -50,6 +56,16 @@ export const StickyScroll = ({
     setBackgroundGradient(linearGradients[activeCard % linearGradients.length]);
   }, [activeCard]);
 
+   
+
+    // useEffect(() => {
+    //   import('../../assets/ai-animation.json').then((data) => {
+    //     setAnimationData(data.default);
+    //   });
+    // }, []);
+
+    // if (!animationData) return <div>Loading...</div>;
+
   return (
     <motion.div
       className='relative flex flex-row-reverse gap-12 w-screen h-screen justify-center space-x-10 overflow-y-auto rounded-md py-10'
@@ -59,7 +75,7 @@ export const StickyScroll = ({
       <div className='div relative lg:w-1/2 flex items-start px-4'>
         <div className='max-w-2xl'>
           {content.map((item, index) => (
-            <div key={item.title + index} className='my-40'>
+            <div key={item.title + index} className='my-28'>
               <motion.h2
                 initial={{
                   opacity: 0,
@@ -78,18 +94,32 @@ export const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className='text-kg mt-10 max-w-sm '
+                className='text-kg my-4 max-w-sm '
               >
                 {item.desc}
               </motion.p>
+              <motion.a
+                initial={{
+                  opacity: 0,
+                }}
+                animate={{
+                  opacity: activeCard === index ? 1 : 0.3,
+                }}
+                className='cursor-pointer flex gap-1 items-center group'
+              >
+                <Link to={item.path} className='group-hover:translate-x-1 transition-all duration-300 ease-in'>
+                  {item.cta}
+                </Link>
+
+                <CgArrowTopRight className='text-lg group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300 ease-in' />
+              </motion.a>
             </div>
           ))}
           <div className='h-40' />
         </div>
       </div>
       {/* image */}
-      <section className='bg-blue-100 lg:w-1/2 sticky top-0 flex justify-end px-12' >
-        
+      <section className='bg-blue-300 lg:w-1/2 sticky top-0 flex justify-end px-12'>
         <div
           style={{ background: backgroundGradient }}
           className={cn(
@@ -104,7 +134,13 @@ export const StickyScroll = ({
             ? content[activeCard].content
             : null}
         </div>
-        
+        <div className='absolute -z-10 top-58'>
+          <Lottie
+            animationData={animationData}
+            renderer='svg'
+            style={{ height: '450px' }}
+          />
+        </div>
       </section>
     </motion.div>
   );

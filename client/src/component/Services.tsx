@@ -1,6 +1,3 @@
-
-import Lottie from 'lottie-react';
-import { useEffect, useState } from 'react';
 import { FiCode, FiEdit3, FiFileText, FiMail, FiPenTool, FiUserCheck,  } from '../data/icons';
 import { StickyScroll } from './ui/StickyScroll';
 
@@ -82,15 +79,7 @@ const services = [
 
 
 const Services = () => {
-  const [animationData, setAnimationData] = useState<unknown>(null);
 
-  useEffect(() => {
-    import('../assets/ai-animation.json').then((data) => {
-      setAnimationData(data.default);
-    });
-  }, []);
-
-  if (!animationData) return <div>Loading...</div>;
 
   return (
     <main id='services' className='w-full h-screen'>
