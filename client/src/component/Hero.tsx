@@ -11,7 +11,7 @@ const repeatedLogos = Array.from({ length: 3 }, () => sponsorLogos).flat();
 const Hero = () => {
   return (
     <main className='h-[91.3vh] overflow-y-hidden boundary flex flex-col items-center justify-between xl:justify-center'>
-      <section className='flex flex-col-reverse items-center justify-center w-full xl:px-6  xl:flex-row xl:items-center xl:justify-between '>
+      <section className='h-[80vh] flex flex-col-reverse items-center justify-center w-full xl:px-6  xl:flex-row xl:items-center xl:justify-between '>
         {/* hero text and buttons */}
         <div className='max-w-3xl flex flex-col justify-center items-center text-center  xl:items-start xl:text-left '>
           {/* tagline for large screen */}
@@ -46,12 +46,10 @@ const Hero = () => {
           <div className='absolute top-0 left-0 w-full h-full -z-50 rounded-full bg-blue-300/10 blur-3xl'></div>
           <img src={banner} alt='coding' className='w-[1000px] h-full -z-10' />
         </div>
-        {/*  floating icons */}
-        {/* <FloatingIcons/> */}
       </section>
 
       {/* bottom marquee */}
-      <section className='w-[100%] mb-6 xl:mb-0 xl:mt-16  bg-faded-pearl'>
+      <section className='w-[100%] xl:mb-0 py-4  bg-faded-pearl'>
         <Marquee direction='left' speed={80} gradient={false}>
           {repeatedLogos.map((logo) => (
             <img
