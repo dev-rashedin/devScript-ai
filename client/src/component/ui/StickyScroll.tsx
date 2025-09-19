@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import {  useRef, useState } from 'react';
 import { useMotionValueEvent, useScroll, motion } from 'motion/react';
 import Lottie from 'lottie-react';
 import { cn } from '../../lib/utils';
