@@ -82,17 +82,10 @@ const Services = () => {
 
 
   return (
-    <main id='services' className='w-full h-screen'>
+    <main id='services' className='w-full'>
       <h2 className='text-center mb-16'>Explore Our Services</h2>
       <div className=''>
         <section className=' w-full'>
-          {/* <div className='hidden lg:flex justify-end px-8 xl:px-16 items-center  lg:w-1/2 bg-blue-300 h-[90vh] w-[50vw]  '>
-            <Lottie
-              animationData={animationData}
-              renderer='svg'
-              style={{ height: '500px' }}
-            />
-          </div> */}
             <StickyScroll content={services} />
         </section>
       </div>

@@ -39,12 +39,12 @@ export const StickyScroll = ({
   });
 
   return (
-    <section ref={ref} className='relative flex w-full h-full -z-10'>
+    <section ref={ref} className='relative flex w-full'>
       {/* Left sticky column */}
-      <div className='hidden lg:flex lg:flex-col w-1/2 sticky top-0 h-screen p-12 items-end bg-blue-300'>
+      <div className='hidden lg:flex lg:flex-col w-1/2 h-screen sticky top-20 p-12 items-end bg-blue-300 self-start'>
         <div
           className={cn(
-            'relative h-[250px] w-[400px] rounded-xl overflow-hidden flex flex-col items-center justify-center text-white',
+            'relative h-[200px] w-[360px] rounded-xl overflow-hidden flex flex-col items-center justify-center text-white',
             contentClassName
           )}
           style={{
@@ -56,7 +56,9 @@ export const StickyScroll = ({
             return (
               <div>
                 <Icon size={40} className='mb-4' />
-                <h2 className='text-2xl font-bold'>{content[activeCard].title}</h2>
+                <h2 className='text-2xl font-bold'>
+                  {content[activeCard].title}
+                </h2>
               </div>
             );
           })()}
@@ -74,10 +76,10 @@ export const StickyScroll = ({
       <div className='w-full lg:w-1/2 px-6'>
         <div className='max-w-xl mx-auto'>
           {content.map((item, index) => (
-            <div key={item.title + index} className='my-28'>
+            <div key={item.title + index} className='my-[80vh]'>
               <motion.h2
                 animate={{ opacity: activeCard === index ? 1 : 0.3 }}
-                className='text-2xl font-bold'
+
               >
                 {item.title}
               </motion.h2>
