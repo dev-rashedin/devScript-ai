@@ -5,7 +5,7 @@ import Services from '../component/Services';
 
 const Home = () => {
   return (
-    <div className=''>
+    <div className='space-y-28 lg:space-y-40'>
       <Hero />
       <Services />
       <Benefits />

@@ -83,7 +83,7 @@ const Services = () => {
 
   return (
     <main id='services' className='w-full'>
-      <h2 className='text-center mb-16'>Explore Our Services</h2>
+      <h2 className='text-center mb-12 lg:mb-28'>Explore Our Services</h2>
       <div className=''>
         <section className=' w-full'>
             <StickyScroll content={services} />

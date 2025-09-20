@@ -1,5 +1,4 @@
 import { useRef, useState, useEffect } from 'react';
-import { motion } from 'motion/react';
 import Lottie from 'lottie-react';
 import { CgArrowTopRight } from 'react-icons/cg';
 import { Link } from 'react-router';
@@ -51,7 +50,7 @@ export const StickyScroll = ({
   return (
     <section ref={containerRef} className='relative flex w-full'>
       {/* Left sticky column */}
-      <div className='hidden lg:flex lg:flex-col w-1/2 h-screen sticky top-20 p-12 items-end bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200'>
+      <div className='hidden lg:flex lg:flex-col w-1/2 h-screen sticky top-20 p-12 items-end bg-service'>
         <div
           className={cn(
             'relative h-[200px] w-[360px] rounded-xl overflow-hidden flex flex-col items-center justify-center',
@@ -80,30 +79,32 @@ export const StickyScroll = ({
 
       {/* Right scrollable column */}
       <div className='w-full lg:w-1/2 px-6'>
-        <div className='max-w-xl mx-auto'>
+        <div className='max-w-xl xl:max-w-2xl mx-auto'>
           {content.map((item, index) => (
             <div
               ref={(el) => {
                 cardRefs.current[index] = el;
               }}
               key={item.title + index}
-              className='my-[90vh]'
+              className='my-8 border primary-border bg-card rounded-lg shadow p-6 lg:border-none lg:mt-[40vh] lg:mb-[90vh]  lg:bg-transparent lg:p-0 lg:shadow-none  relative'
             >
-              <motion.h2 className='text-2xl font-bold'>{item.title}</motion.h2>
-              <motion.p className='text-base my-4 max-w-sm'>
-                {item.desc}
-              </motion.p>
-              <motion.div>
+              <div className='absolute top-1  left-1 -z-10 rounded-lg bg-service-card w-full h-full lg:hidden'></div>
+              <div className='flex items-center gap-4'>
+                <span className='lg:hidden'>{<item.icon size={30} />}</span>
+                <h2 className='text-2xl font-bold '>{item.title}</h2>
+              </div>
+              <p className='text-base my-6 max-w-sm'>{item.desc}</p>
+              <div>
                 <Link
                   to={item.path}
-                  className='cursor-pointer flex gap-1 items-center group'
+                  className='cursor-pointer flex gap-1  items-center text-[16px] group mt-6 justify-end lg:justify-start'
                 >
-                  <span className='group-hover:translate-x-1 transition-all duration-300 ease-in'>
+                  <span className=' group-hover:translate-x-1 transition-all duration-300 ease-in'>
                     {item.cta}
                   </span>
-                  <CgArrowTopRight className='text-lg group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300 ease-in' />
+                  <CgArrowTopRight className='text-2xl group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300 ease-in' />
                 </Link>
-              </motion.div>
+              </div>
             </div>
           ))}
           <div className='h-40' />
