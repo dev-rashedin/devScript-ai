@@ -10,8 +10,8 @@ const repeatedLogos = Array.from({ length: 3 }, () => sponsorLogos).flat();
 
 const Hero = () => {
   return (
-    <main className='h-[91.3vh] overflow-y-hidden boundary flex flex-col items-center justify-between xl:justify-center'>
-      <section className='h-[80vh] flex flex-col-reverse items-center justify-center w-full xl:px-6  xl:flex-row xl:items-center xl:justify-between '>
+    <main className='h-[91.3vh] overflow-y-hidden  flex flex-col items-center justify-between xl:justify-center'>
+      <section className='boundary h-[80vh]  flex flex-col-reverse items-center justify-center w-full xl:px-6  xl:flex-row xl:items-center xl:justify-between '>
         {/* hero text and buttons */}
         <div className='max-w-3xl flex flex-col justify-center items-center text-center  xl:items-start xl:text-left '>
           {/* tagline for large screen */}
@@ -31,7 +31,11 @@ const Hero = () => {
 
           <div className='flex-center gap-4 mt-8 xl:mt-12'>
             <Button label='Get Started' type='primary' />
-            <Button label='Explore Services' type='secondary' href='#services' />
+            <Button
+              label='Explore Services'
+              type='secondary'
+              href='#services'
+            />
           </div>
 
           <p className='hidden  max-w-2xl text-muted text-xs mt-4 text-center xl:mt-6 xl:text-left'>
@@ -50,16 +54,16 @@ const Hero = () => {
 
       {/* bottom marquee */}
       <section className='w-[100%] xl:mb-0 py-4  bg-faded-pearl'>
-        <Marquee direction='left' speed={80} gradient={false}>
-          {repeatedLogos.map((logo) => (
-            <img
-              key={`${logo.id}-${Math.random()}`}
-              src={logo.href}
-              alt={logo.name}
-              className='h-9 mr-20'
-            />
-          ))}
-        </Marquee>
+          <Marquee direction='left' speed={80} gradient={false}>
+            {repeatedLogos.map((logo) => (
+              <img
+                key={`${logo.id}-${Math.random()}`}
+                src={logo.href}
+                alt={logo.name}
+                className='h-9 mr-20'
+              />
+            ))}
+          </Marquee>    
       </section>
     </main>
   );

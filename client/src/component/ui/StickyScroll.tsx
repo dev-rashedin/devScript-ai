@@ -1,10 +1,21 @@
 import { useRef, useState, useEffect } from 'react';
+import { IconType } from 'react-icons';
 import Lottie from 'lottie-react';
 import { CgArrowTopRight } from 'react-icons/cg';
 import { Link } from 'react-router';
 import { cn } from '../../lib/utils';
-import type { ServiceContent } from '../../types';
-import animationData from '../../assets/ai-animation.json';
+// import animationData from '../../assets/ai-animation.json';
+
+
+
+declare interface ServiceContent {
+  title: string;
+  desc: string;
+  icon: IconType;
+  path: string;
+  cta: string;
+  content?: React.ReactNode;
+}
 
 export const StickyScroll = ({
   content,
@@ -16,6 +27,13 @@ export const StickyScroll = ({
   const [activeCard, setActiveCard] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+   const [animationData, setAnimationData] = useState<unknown>(null);
+
+   useEffect(() => {
+     import('../../assets/ai-animation.json').then((data) => {
+       setAnimationData(data.default);
+     });
+   }, []);
 
   // Update activeCard based on which card is entering the viewport
   const handleScroll = () => {
@@ -46,6 +64,8 @@ export const StickyScroll = ({
       window.removeEventListener('scroll', handleScroll);
     };
   }, [activeCard]);
+
+
 
   return (
     <section ref={containerRef} className='relative flex w-full'>

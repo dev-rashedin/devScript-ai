@@ -1,18 +1,18 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.tsx'
+import App from './App'
 import { createBrowserRouter } from 'react-router';
-import { RouterProvider } from 'react-router/dom';
-import { ThemeProvider } from './providers/ThemeProvider.tsx';
-import Home from './pages/Home.tsx';
-import CodeExplainForm from './component/forms/CodeExplainForm.tsx';
-import Summarizer from './pages/Summarizer.tsx';
-import ErrorPage from './pages/ErrorPage.tsx';
-import Login from './pages/Login.tsx';
-import Subscription from './pages/Subscription.tsx';
-import CodeRefactorForm from './component/forms/CodeRefactorForm.tsx';
-import ArticleGeneratorForm from './component/forms/ArticleGeneratorForm.tsx';
+import { RouterProvider } from 'react-router';
+import { ThemeProvider } from './providers/ThemeProvider';
+import Home from './pages/Home';
+import CodeExplainForm from './component/forms/CodeExplainForm';
+import Summarizer from './pages/Summarizer';
+import ErrorPage from './pages/ErrorPage';
+import Login from './pages/Login';
+import Subscription from './pages/Subscription';
+import CodeRefactorForm from './component/forms/CodeRefactorForm';
+import ArticleGeneratorForm from './component/forms/ArticleGeneratorForm';
 
 const router = createBrowserRouter([
   {
